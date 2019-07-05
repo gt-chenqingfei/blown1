@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/bg_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="24dp" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/topicCover"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="96dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:roundedCornerRadius="4dp"
+        tools:text="TextView" />
+
+    <TextView
+        android:id="@+id/channel_detail_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/subscribe_btn"
+        app:layout_constraintStart_toEndOf="@+id/topicCover"
+        app:layout_constraintTop_toTopOf="@+id/topicCover"
+        tools:text="明星妆容教学明星明星妆容教学明星" />
+
+    <TextView
+        android:id="@+id/subscribe_video_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="#e5e5e5"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/channel_detail_title"
+        app:layout_constraintTop_toBottomOf="@+id/channel_detail_title"
+        tools:text="341组故事" />
+
+    <View
+        android:id="@+id/dot"
+        android:layout_width="2dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/channel_detail_dot"
+        app:layout_constraintBottom_toBottomOf="@+id/subscribe_video_num"
+        app:layout_constraintStart_toEndOf="@+id/subscribe_video_num"
+        app:layout_constraintTop_toTopOf="@+id/subscribe_video_num" />
+
+    <TextView
+        android:id="@+id/subscribe_num"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="#e5e5e5"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/subscribe_video_num"
+        app:layout_constraintEnd_toStartOf="@+id/subscribe_btn"
+        app:layout_constraintStart_toEndOf="@+id/dot"
+        app:layout_constraintTop_toTopOf="@+id/subscribe_video_num"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="9万人订阅9万人订阅99万人订阅9万人订阅9" />
+
+    <TextView
+        android:id="@+id/channel_detail_sub_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="24dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="#e5e5e5"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/topicCover"
+        app:layout_constraintTop_toBottomOf="@+id/topicCover"
+        tools:text="吹爆韩女团神仙颜值，我要打call吹爆韩女团神仙颜值，吹爆韩女团神仙颜值，我要打call吹爆韩女团神仙颜值" />
+
+
+    <TextView
+        android:id="@+id/subscribe_btn"
+        android:layout_width="68dp"
+        android:layout_height="27dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/bg_subscribe_btn"
+        android:gravity="center"
+        android:text="@string/string_subscription"
+        android:textColor="#171b24"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/channel_detail_title" />
+
+
+</android.support.constraint.ConstraintLayout>

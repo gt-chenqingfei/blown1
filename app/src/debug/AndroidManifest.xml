@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  package="com.shuashuakan.android">
+
+
+  <application
+    android:name=".DebugDuckApplication"
+    android:icon="@mipmap/ic_launcher"
+    android:networkSecurityConfig="@xml/network_security_config"
+    tools:replace="android:name"
+    tools:targetApi="n"
+    tools:ignore="GoogleAppIndexingWarning">
+    <activity android:name=".ui.PrometheusActivity" />
+  </application>
+
+</manifest>

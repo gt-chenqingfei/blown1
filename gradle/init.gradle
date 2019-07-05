@@ -1,0 +1,13 @@
+allprojects {
+  buildscript {
+    repositories {
+      maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+      maven { url 'https://dl.google.com/dl/android/maven2/' }
+    }
+  }
+
+  repositories {
+    maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+    maven { url 'https://dl.google.com/dl/android/maven2/' }
+  }
+}

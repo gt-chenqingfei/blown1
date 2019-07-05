@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_profile_age_value"
+    android:layout_width="80dp"
+    android:layout_height="32dp"
+    android:layout_marginTop="15dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:background="@drawable/selector_item_profile_age"
+    android:gravity="center"
+    android:textStyle="bold"
+    android:lineSpacingExtra="0sp"
+    android:textColor="@color/profile_age_item_color"
+    android:textSize="14sp" />

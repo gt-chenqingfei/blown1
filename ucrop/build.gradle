@@ -1,0 +1,30 @@
+apply from: "$rootDir/deps.gradle"
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion buildConfig.compileSdk
+
+    defaultConfig {
+        minSdkVersion buildConfig.minSdk
+        targetSdkVersion buildConfig.targetSdk
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+
+    resourcePrefix 'ucrop_'
+}
+
+dependencies {
+    api project(':base-ui')
+    implementation deps.android.support.appCompat
+    implementation deps.android.support.recyclerView
+    implementation "com.github.bumptech.glide:glide:4.9.0"
+}

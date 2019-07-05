@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/mRecommendHolderView"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/mRecommendUserImageView"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        app:layout_constraintBottom_toBottomOf="@+id/mRecommendHolderView"
+        app:layout_constraintStart_toStartOf="@+id/mRecommendHolderView"
+        app:layout_constraintTop_toTopOf="@+id/mRecommendHolderView"
+        app:placeholderImage="@drawable/avatar_default"
+        app:roundAsCircle="true" />
+
+    <com.shuashuakan.android.modules.widget.FollowTextView
+        android:id="@+id/mRecommendUserFollowView"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/bg_explore_un_follow"
+        android:gravity="center"
+        android:paddingLeft="9.5dp"
+        android:paddingRight="9.5dp"
+        android:text="@string/string_follow"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/mRecommendHolderView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mRecommendHolderView"
+        app:markColor="@color/white" />
+
+
+    <TextView
+        android:id="@+id/mRecommendUserNameView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:lineSpacingExtra="0sp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/mRecommendUserImageView"
+        app:layout_constraintTop_toTopOf="@+id/mRecommendHolderView"
+        tools:text="苏小梦是超级可爱无敌小仙" />
+
+    <TextView
+        android:id="@+id/mRecommendUserTagView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_user_topic_tag"
+        android:lineSpacingExtra="0sp"
+        android:paddingBottom="3dp"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        android:paddingTop="3dp"
+        android:textColor="#28f59a"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="@+id/mRecommendUserNameView"
+        app:layout_constraintTop_toBottomOf="@+id/mRecommendUserNameView"
+        tools:text="今日最有梗up主" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/mRecommendUserRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/mRecommendHolderView" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/color_normal_0d0d0d"
+        app:layout_constraintTop_toBottomOf="@+id/mRecommendUserRecyclerView" />
+
+</android.support.constraint.ConstraintLayout>

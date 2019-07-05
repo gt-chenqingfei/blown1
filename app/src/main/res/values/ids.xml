@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="floorPosition" type="id" />
+    <item name="chainPosition" type="id" />
+    <item name="feed" type="id" />
+    <item name="tagTopicCategory" type="id" />
+    <item name="tagFeedChannel" type="id" />
+</resources>

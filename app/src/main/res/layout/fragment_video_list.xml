@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:keepScreenOn="true"
+    >
+
+    <FrameLayout
+        android:id="@+id/videoPlayerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/back_blur_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:actualImageScaleType="centerCrop" />
+
+        <com.shuashuakan.android.player.SSKVideoTextureView
+            android:id="@+id/video_texture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center" />
+
+        <master.flame.danmaku.ui.widget.DanmakuView
+            android:id="@+id/danmakuView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp" />
+
+        <com.shuashuakan.android.modules.widget.up.PeriscopeLayout
+            android:id="@+id/up_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="100dp"
+            app:itemAlignParentBottom="true"
+            app:itemAlignParentRight="true"
+            app:itemHeight="30dp"
+            app:itemMarginBottom="90dp"
+            app:itemMarginRight="20dp"
+            app:itemWidth="30dp" />
+
+        <com.shuashuakan.android.modules.widget.customview.InfiniteLineLoadingView
+            android:id="@+id/infiniteLineLoadingView"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="2dp"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <com.shuashuakan.android.modules.widget.BetterRecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible" />
+
+
+    <include layout="@layout/empty_view" />
+
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:src="@drawable/ic_arrow_back"
+        android:visibility="gone" />
+
+    <ImageView
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:paddingLeft="15dp"
+        android:visibility="gone"
+        android:paddingRight="15dp"
+        android:layout_gravity="end"
+        android:src="@drawable/icon_common_grey_close"
+
+         />
+
+    <ViewStub
+        android:id="@+id/chestFloatViewStub"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="72dp"
+        android:layout="@layout/layout_chest_float" />
+
+
+</FrameLayout>

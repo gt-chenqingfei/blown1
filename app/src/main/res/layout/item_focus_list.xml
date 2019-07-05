@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/normal_color_0f1218"
+    android:orientation="horizontal"
+    android:paddingLeft="16dp"
+    android:paddingRight="15dp">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/focus_avatar"
+        android:layout_width="45.8dp"
+        android:layout_height="45.8dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="22dp"
+        app:placeholderImage="@drawable/avatar_default"
+        app:roundAsCircle="true" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="11dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/focus_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/focus_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/color_normal_b6b6b6"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <com.shuashuakan.android.modules.widget.FollowButton
+        android:id="@+id/follow_btn"
+        android:layout_width="68dp"
+        android:layout_height="27dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="22dp"
+        android:gravity="center" />
+</LinearLayout>

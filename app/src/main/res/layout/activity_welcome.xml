@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv_welcome_help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22.5dp"
+        android:layout_marginTop="34.5dp"
+        android:drawableStart="@drawable/ic_help"
+        android:drawablePadding="6.5dp"
+        android:text="@string/string_help"
+        android:visibility="invisible"
+        android:textColor="@color/black40"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_welcome_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="18.5dp"
+        android:drawableEnd="@drawable/ic_next"
+        android:text="@string/string_have_a_look"
+        android:textColor="@color/black40"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_welcome_help" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="145dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_welcome_help" />
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="18.5dp"
+        android:drawableEnd="@drawable/ic_next"
+        android:text="@string/string_have_a_look"
+        android:textColor="@color/black40"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_welcome_help" />
+
+
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp">
+
+        <TextView
+            android:id="@+id/tv_welcome_login_by_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+
+            android:layout_marginBottom="35dp"
+            android:background="@drawable/bg_color_black_radius_24"
+            android:gravity="center"
+            android:text="@string/string_login_by_mobile"
+            android:textColor="@color/color_ffef30"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/v_welcome_line_left"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <View
+
+            android:id="@+id/v_welcome_line_left"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginBottom="35dp"
+            android:background="@color/black40"
+            app:layout_constraintBottom_toTopOf="@+id/iv_welcome_login_by_wx"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/v_welcome_line_third_login" />
+
+        <TextView
+            android:id="@+id/v_welcome_line_third_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18.5dp"
+            android:layout_marginEnd="18.5dp"
+            android:text="@string/string_third_login"
+            android:textColor="@color/black40"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@+id/v_welcome_line_left"
+            app:layout_constraintLeft_toRightOf="@+id/v_welcome_line_left"
+            app:layout_constraintRight_toLeftOf="@+id/v_welcome_line_right"
+            app:layout_constraintTop_toTopOf="@+id/v_welcome_line_left" />
+
+        <View
+
+            android:id="@+id/v_welcome_line_right"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+
+            android:background="@color/black40"
+            app:layout_constraintLeft_toRightOf="@+id/v_welcome_line_third_login"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/v_welcome_line_left" />
+
+        <ImageView
+            android:id="@+id/iv_welcome_login_by_wx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="38.9dp"
+            android:src="@drawable/ic_wx"
+            app:layout_constraintBottom_toTopOf="@+id/tv_welcome_protocol"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_welcome_protocol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34.5dp"
+            android:layout_marginBottom="15dp"
+            android:text="@string/privacy_statement"
+            android:textColor="@color/black40"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>

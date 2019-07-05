@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/play_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/frame_fake_cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/blur_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:actualImageScaleType="centerCrop" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/fake_video_cover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:fadeDuration="0" />
+
+
+    </FrameLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_video_shadow" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_video_top_shadow" />
+
+
+    <LinearLayout
+        android:id="@+id/video_label_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/video_title_view"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/pindao_shape"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="4dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="4dp"
+        android:visibility="gone">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/video_label"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            app:placeholderImage="@drawable/ic_channel"
+            app:roundedCornerRadius="3dp" />
+
+        <TextView
+            android:id="@+id/video_label_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:maxWidth="144dp"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            tools:text="#无边泳池好喜欢" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/operation_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/video_title_view"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_marginEnd="60dp"
+        android:layout_marginStart="15dp"
+        android:orientation="horizontal">
+
+        <com.shuashuakan.android.modules.widget.FollowTextView
+            android:id="@+id/followUser"
+            android:layout_width="26dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="4dp"
+            android:layout_marginStart="32dp"
+            android:background="@drawable/shape_follow_radius_bg"
+            android:textSize="10sp"
+            app:needDrawAddOperator="true"
+            app:showDrawerAnimation="true" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/user_avatar"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/avatar_default"
+            app:failureImage="@drawable/avatar_default"
+            app:placeholderImage="@drawable/avatar_default"
+            app:roundAsCircle="true"
+            app:roundingBorderColor="@color/white"
+            app:roundingBorderWidth="1dp" />
+
+        <TextView
+            android:id="@+id/user_name_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@+id/followUser"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/user_avatar"
+            app:layout_constraintStart_toEndOf="@+id/followUser"
+            app:layout_constraintTop_toTopOf="@+id/user_avatar"
+            tools:text="南方小小猫咪" />
+
+        <LinearLayout
+            android:id="@+id/bottom_follow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/user_name_view"
+            android:layout_below="@+id/user_name_view"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/shape_follow_bottom_bg"
+            android:orientation="horizontal"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:visibility="gone">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/ic_follow_star" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="4dp"
+                android:gravity="center"
+                android:paddingBottom="1dp"
+                android:text="@string/string_your_follow"
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/video_title_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/barrageContainer"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:lineSpacingExtra="3dp"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        tools:text="宝宝最爱的双桨划船的小猪佩奇划船游泳道具，超喜欢！" />
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/activity_float"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_above="@+id/ll_up_view"
+        android:layout_alignParentEnd="true"
+        android:padding="8dp"
+        android:visibility="gone" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_up_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_comment"
+        android:layout_alignParentEnd="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/up_view"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:paddingEnd="12dp"
+            android:paddingStart="15dp"
+            android:paddingTop="11dp"
+            android:scaleType="centerInside" />
+
+        <TextView
+            android:id="@+id/tv_up_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/share_icon_view"
+        android:layout_alignParentEnd="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/comment_icon_view"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:padding="16dp"
+            app:srcCompat="@drawable/ic_timeline_comment" />
+
+        <TextView
+            android:id="@+id/tv_comment_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-5dp"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/share_icon_view"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_above="@+id/barrageContainer"
+        android:layout_alignParentEnd="true"
+        android:layout_alignWithParentIfMissing="true"
+        android:padding="16dp"
+        app:srcCompat="@drawable/ic_timeline_share" />
+
+    <com.shuashuakan.android.modules.widget.DanmakuContainer
+        android:id="@+id/barrageContainer"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_alignParentBottom="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:visibility="visible">
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentTop="true"
+            android:background="@color/color_normal_b6b6b6_70" />
+
+        <ImageView
+            android:id="@+id/barrageToggle"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_barrage_toggle_keyboard_hide" />
+
+        <EditText
+            android:id="@+id/inputBarrage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/barrageToggle"
+            android:layout_toStartOf="@+id/sendBarrage"
+            android:background="@drawable/bg_input_barrage_keyboard_hide"
+            android:hint="@string/string_send_barrage_hind"
+            android:imeOptions="actionSend"
+            android:lines="1"
+            android:paddingBottom="5dp"
+            android:paddingEnd="12dp"
+            android:paddingStart="12dp"
+            android:paddingTop="5dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="@color/color_normal_b6b6b6"
+            android:textCursorDrawable="@null"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/sendBarrage"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="@string/string_send"
+            android:textColor="@color/barrage_send_text_color"
+            android:textSize="14sp" />
+
+
+    </com.shuashuakan.android.modules.widget.DanmakuContainer>
+
+</RelativeLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/profile_ll_2f_iv_id"
+        android:layout_width="13dp"
+        android:layout_height="12dp" />
+
+    <TextView
+        android:id="@+id/profile_ll_2f_tv_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:gravity="center_horizontal"
+        android:text="@string/string_anime_up_main"
+        android:textColor="@color/color_normal_838791"
+        android:textSize="12sp" />
+
+</LinearLayout>

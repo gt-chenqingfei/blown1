@@ -1,0 +1,68 @@
+apply from: "$rootDir/deps.gradle"
+
+apply plugin: 'com.android.library'
+apply plugin: 'org.jetbrains.kotlin.android'
+apply plugin: 'org.jetbrains.kotlin.android.extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+  compileSdkVersion buildConfig.compileSdk
+
+
+  androidExtensions {
+    experimental = true
+  }
+
+  defaultConfig {
+    minSdkVersion buildConfig.minSdk
+    targetSdkVersion buildConfig.targetSdk
+    versionCode 1
+    versionName "1.0"
+    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+
+  lintOptions {
+    abortOnError false
+  }
+}
+
+dependencies {
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+  // kotlin
+  implementation deps.kotlin.stdlib.jdk
+  implementation deps.moshi
+
+  // retrofit
+  implementation deps.retrofit.client
+  implementation deps.retrofit.converterMoshi
+  implementation deps.retrofit.adapterRx
+
+  implementation deps.kotshi.api
+  kapt deps.kotshi.compiler
+
+  // okhttp
+  implementation deps.okhttp.client
+  implementation deps.okhttp.logging
+
+  // rx
+  implementation deps.rx.java
+
+  implementation deps.dagger.runtime
+  kapt deps.dagger.compiler
+
+  implementation deps.android.support.annotations
+
+  compileOnly project(path: ':commons')
+}

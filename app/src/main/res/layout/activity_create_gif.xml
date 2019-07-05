@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/color_normal_2222222"
+  android:fitsSystemWindows="true"
+  android:orientation="vertical">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_layout_toolbar" />
+
+    <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginLeft="20dp"
+      android:layout_marginRight="20dp"
+      android:layout_marginBottom="20dp">
+
+      <FrameLayout
+        android:id="@+id/preview_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:transitionName="makeGif">
+
+        <com.pili.pldroid.player.widget.PLVideoView
+          android:id="@+id/video_player"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center" />
+
+        <com.shuashuakan.android.modules.publisher.view.CutView
+          android:id="@+id/cut_view"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_gravity="center" />
+
+        <com.shuashuakan.android.modules.publisher.view.VideoEditorView
+          android:id="@+id/video_editor"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent" />
+      </FrameLayout>
+
+
+      <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal">
+
+        <ViewSwitcher
+          android:id="@+id/operation_delete_switch"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:inAnimation="@anim/alpha_in"
+          android:outAnimation="@anim/alpha_out">
+
+          <LinearLayout
+            android:id="@+id/operation_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <ImageView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:padding="10dp"
+              android:src="@drawable/ic_video_edit_img"
+              android:visibility="gone" />
+
+            <ImageView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:onClick="onAddTextClick"
+              android:padding="10dp"
+              android:src="@drawable/ic_video_edit_text" />
+
+            <ImageView
+              android:id="@+id/crop_image"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:onClick="onCropVideoClick"
+              android:padding="10dp"
+              android:src="@drawable/ic_video_edit_crop" />
+          </LinearLayout>
+
+          <ImageView
+            android:id="@+id/delete_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_trash_normal" />
+        </ViewSwitcher>
+
+      </FrameLayout>
+
+    </FrameLayout>
+
+  </LinearLayout>
+
+  <FrameLayout
+    android:id="@+id/make_done_page"
+    android:layout_width="match_parent"
+    android:visibility="gone"
+    android:layout_height="match_parent"
+    android:background="@color/color_normal_111217_70">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="150dp"
+        android:gravity="center_horizontal"
+        android:text="@string/string_face_to_pic_share_to_friend"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="36dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:onClick="onShareCommentClick"
+          android:orientation="vertical">
+
+          <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/ic_comment_share" />
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="9dp"
+            android:text="@string/string_comment_label"
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="40dp"
+          android:onClick="onShareWechatClick"
+          android:orientation="vertical">
+
+          <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/ic_wechat_share" />
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="9dp"
+            android:text="@string/string_share_wechat_friend_label"
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="40dp"
+          android:onClick="onShareQqClick"
+          android:orientation="vertical">
+
+          <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/ic_share_dialog_qq" />
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="9dp"
+            android:text="@string/string_qq_label"
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+
+        </LinearLayout>
+      </LinearLayout>
+
+      <com.flyco.roundview.RoundTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="36dp"
+        android:drawableLeft="@drawable/ic_back_black_14dp"
+        android:onClick="onBackFeedClick"
+        android:paddingLeft="5dp"
+        android:paddingTop="10dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="10dp"
+        android:text="@string/string_back_video_label"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:rv_backgroundColor="@color/color_ffef30"
+        app:rv_cornerRadius="30dp" />
+    </LinearLayout>
+  </FrameLayout>
+
+</FrameLayout>

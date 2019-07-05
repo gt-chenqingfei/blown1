@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.shuashuakan.android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <application
+        android:name=".DuckApplication"
+        android:allowBackup="false"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:resizeableActivity="false"
+        android:theme="@style/AppTheme"
+        tools:replace="android:allowBackup">
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <meta-data
+            android:name="com.sensorsdata.analytics.android.AndroidId"
+            android:value="true" />
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.4" />
+        <!-- 适配华为（huawei）刘海屏 -->
+        <meta-data
+            android:name="android.notch_support"
+            android:value="true" />
+        <!-- 适配小米（xiaomi）刘海屏 -->
+        <meta-data
+            android:name="notch.config"
+            android:value="portrait|landscape" />
+        <!--Fabric-->
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="ee2dc206bf9abf3554353aa12f855f52be2005e0" />
+
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LaunchTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="start"
+                    android:scheme="ssk" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".modules.home.HomeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.player.activity.VideoPlayActivity"
+            android:theme="@style/CusTheme" />
+        <activity
+            android:name=".modules.web.H5Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.setting.SettingsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BlackBackTheme" />
+        <activity
+            android:name=".modules.account.activity.ModifyPhoneActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BlackBackTheme" />
+        <activity
+            android:name=".modules.profile.EditProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EditProfileTheme" />
+
+        <activity
+            android:name=".modules.topic.TopicDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/TopicDetailTheme" />
+        <activity
+            android:name=".modules.profile.UserProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.discovery.DiscoveryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.discovery.UpStarRankingListActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- wechat -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- wechat end -->
+
+
+        <!-- qq -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1107388303" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- qq end -->
+
+
+        <!-- jpush -->
+        <receiver
+            android:name=".push.receiver.PushReceiver"
+            android:enabled="true"
+            tools:node="replace">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+
+                <category android:name="${applicationId}" />
+            </intent-filter>
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
+                <!-- Required  显示通知栏 -->
+                <category android:name="${applicationId}" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="4ca8e46b2f10f0e8220d36794729583e" />
+
+        <service android:name="com.amap.api.location.APSService" />
+
+        <!-- provider -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".modules.profile.FocusListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.comment.CommentImageShowActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/TransitionTheme" />
+        <activity
+            android:name=".modules.profile.EditSignActivity"
+            android:screenOrientation="portrait" />
+
+        <service android:name=".service.PullService" />
+
+        <activity
+            android:name="com.shuashuakan.android.modules.publisher.chains.ChainsPublishActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".modules.publisher.SelectTopicActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.publisher.VideoRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.publisher.VideoEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.message.MessagePersonListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.message.SystemNoticeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.publisher.CreateGifActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".modules.discovery.RankingListActivity"
+            android:screenOrientation="portrait" />
+        <!--  <activity
+              android:name=".ui.explore.activitys.SubscribeActivity"
+              android:screenOrientation="portrait" />-->
+        <activity
+            android:name=".modules.topic.TopicCategoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.account.activity.PerfectSelectHobbyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.message.MessageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.shuashuakan.android.modules.account.activity.WelcomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/WelcomeTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <activity
+            android:name=".modules.account.activity.LoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysVisible" />
+
+        <activity
+            android:name=".modules.account.activity.PerfectProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EditProfileTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <activity
+            android:name=".modules.account.activity.MobileModifyActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".modules.viphome.VideoHallActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreenTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".modules.publisher.PublishFilterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/TransitionTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <activity
+            android:name=".modules.partition.CategoryIndexActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

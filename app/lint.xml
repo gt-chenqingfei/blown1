@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+  <issue id="HardcodedText" severity="ignore"/>
+  <issue id="InvalidPackage">
+    <ignore regexp=".*fastjson.*"/>
+  </issue>
+ <issue id="SimpleDateFormat" severity="ignore"/>
+ <issue id="ContentDescription" severity="ignore"/>
+ <issue id="SetTextI18n" severity="ignore"/>
+</lint>

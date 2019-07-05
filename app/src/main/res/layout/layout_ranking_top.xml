@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        tools:background="@drawable/bg_ranking"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
+            android:layout_weight="1"
+            android:layout_marginTop="60dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:src="@drawable/ic_silver" />
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/one_avatar"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginBottom="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:placeholderImage="@drawable/avatar_default"
+                    app:roundAsCircle="true"
+                    app:roundingBorderColor="@android:color/white"
+                    app:roundingBorderWidth="3dp" />
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|bottom">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_silver_flag" />
+
+                    <TextView
+                        android:id="@+id/one_up_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="1dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="10sp" />
+                </FrameLayout>
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/one_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginRight="6dp"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="@color/color_normal_f2f2f2"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:text="不够风骚" />
+
+            <TextView
+                android:id="@+id/one_follow_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="4dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                tools:text="581人关注" />
+
+            <com.shuashuakan.android.modules.widget.FollowButton
+                android:id="@+id/one_follow"
+                android:layout_width="60dp"
+                android:layout_height="24dp"
+                android:layout_marginBottom="30dp"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
+            android:layout_weight="1"
+            android:layout_marginTop="40dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:src="@drawable/ic_gold" />
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/two_avatar"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:placeholderImage="@drawable/avatar_default"
+                    app:roundAsCircle="true"
+                    app:roundingBorderColor="@color/color_normal_ffe878"
+                    app:roundingBorderWidth="3dp" />
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|bottom">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_gold_flag" />
+
+                    <TextView
+                        android:id="@+id/two_up_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="1dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="10sp" />
+                </FrameLayout>
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/two_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginRight="6dp"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="@color/color_normal_ffe878"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:text="韩国酱" />
+
+            <TextView
+                android:id="@+id/two_follow_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="4dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                tools:text="305人关注" />
+
+            <com.shuashuakan.android.modules.widget.FollowButton
+                android:id="@+id/two_follow"
+                android:layout_width="60dp"
+                android:layout_height="24dp"
+                android:layout_marginBottom="30dp"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="60dp"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:src="@drawable/ic_bronze" />
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/three_avatar"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginBottom="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:placeholderImage="@drawable/avatar_default"
+                    app:roundAsCircle="true"
+                    app:roundingBorderColor="@color/color_normal_e2bf84"
+                    app:roundingBorderWidth="3dp" />
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|bottom">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_bronze_flag" />
+
+                    <TextView
+                        android:id="@+id/three_up_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="1dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="10sp" />
+                </FrameLayout>
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/three_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginRight="6dp"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="@color/color_normal_e2bf84"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:text="糖小糖" />
+
+            <TextView
+                android:id="@+id/three_follow_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="4dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                tools:text="587人关注" />
+
+            <com.shuashuakan.android.modules.widget.FollowButton
+                android:id="@+id/three_follow"
+                android:layout_width="60dp"
+                android:layout_height="24dp"
+                android:layout_marginBottom="30dp"
+                android:gravity="center" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:src="@drawable/rank_top_bottom_bg" />
+</FrameLayout>

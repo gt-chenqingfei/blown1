@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/profile_basic_top_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/profile_more_top_bg" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/profile_basic_top_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/profile_basic_top_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/icon_profile_haixiu" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_profile_tips"
+        android:lineSpacingExtra="14sp"
+        android:paddingBottom="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="15dp"
+        android:text="@string/string_to_learn_mor"
+        android:textColor="@color/black_85"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/profile_basic_top_logo"
+        app:layout_constraintTop_toTopOf="@+id/profile_basic_top_logo" />
+
+
+    <View
+        android:id="@+id/profile_basic_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/shape_profile_container"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_basic_top_bg" />
+
+
+    <TextView
+        android:id="@+id/profile_avatar_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="44dp"
+        android:lineSpacingExtra="0sp"
+        android:text="@string/string_sex_label"
+        android:textColor="@color/black_50"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/profile_basic_container"
+        app:layout_constraintTop_toTopOf="@+id/profile_basic_container" />
+
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/profile_male_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:alpha="0.5"
+        app:layout_constraintEnd_toStartOf="@+id/profile_female_image"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="@+id/profile_basic_container"
+        app:layout_constraintTop_toBottomOf="@+id/profile_avatar_label"
+        app:srcCompat="@drawable/icon_male" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/profile_female_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:alpha="0.5"
+        app:layout_constraintEnd_toEndOf="@+id/profile_basic_container"
+        app:layout_constraintStart_toEndOf="@+id/profile_male_image"
+        app:layout_constraintTop_toBottomOf="@+id/profile_avatar_label"
+        app:srcCompat="@drawable/icon_female" />
+
+
+    <TextView
+        android:id="@+id/profile_age_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="38dp"
+        android:lineSpacingExtra="0sp"
+        android:text="@string/string_age_label"
+        android:textColor="@color/black_50"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/profile_basic_container"
+        app:layout_constraintTop_toBottomOf="@+id/profile_male_image" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/profile_age_list"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="@+id/profile_basic_container"
+        app:layout_constraintStart_toStartOf="@+id/profile_basic_container"
+        app:layout_constraintTop_toBottomOf="@+id/profile_age_label" />
+
+
+    <TextView
+        android:id="@+id/profile_next"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/profile_common_next_selector"
+        android:enabled="false"
+        android:gravity="center"
+        android:lineSpacingExtra="0sp"
+        android:text="@string/string_next_step"
+        android:textColor="@color/selector_profile_next_color"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/profile_basic_container"
+        app:layout_constraintEnd_toEndOf="@+id/profile_basic_container"
+        app:layout_constraintStart_toStartOf="@+id/profile_basic_container" />
+
+
+</android.support.constraint.ConstraintLayout>

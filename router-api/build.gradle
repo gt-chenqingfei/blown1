@@ -1,0 +1,41 @@
+apply from: "$rootDir/deps.gradle"
+
+apply plugin: 'com.android.library'
+apply plugin: 'org.jetbrains.kotlin.android'
+
+android {
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+
+  compileSdkVersion 26
+
+  defaultConfig {
+    minSdkVersion buildConfig.minSdk
+    targetSdkVersion buildConfig.targetSdk
+    versionCode 1
+    versionName "1.0"
+  }
+
+  buildTypes {
+    release {
+      postprocessing {
+        removeUnusedCode false
+        removeUnusedResources false
+        obfuscate false
+        optimizeCode false
+      }
+    }
+  }
+}
+
+dependencies {
+  implementation deps.android.support.annotations
+  implementation deps.timber
+  implementation deps.linker.runtime
+}
+
+afterEvaluate {
+  generateReleaseBuildConfig.enabled = false
+}

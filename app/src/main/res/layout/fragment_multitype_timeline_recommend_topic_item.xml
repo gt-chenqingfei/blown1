@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="304dp"
+    android:layout_height="153dp"
+    android:layout_marginRight="9dp"
+    android:orientation="vertical">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/topic_channel_iv_bg_cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:placeholderImageScaleType="centerCrop"
+        app:roundedCornerRadius="6dp" />
+
+    <ImageView
+        android:id="@+id/topic_channel_iv_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_normal_28292d_80"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/topic_channel_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="19.5dp"
+        android:src="@drawable/ic_channel"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/topic_channel_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:maxLines="2"
+        android:text="@string/string_temp_dec_12_min"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/topic_channel_iv"
+        app:layout_constraintLeft_toRightOf="@+id/topic_channel_iv"
+        app:layout_constraintTop_toTopOf="@+id/topic_channel_iv" />
+
+    <TextView
+        android:id="@+id/topic_channel_subscribe_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/bg_multitype_timeline_un_follow"
+        android:gravity="center"
+        android:paddingLeft="9.5dp"
+        android:paddingRight="9.5dp"
+        android:text="@string/string_subscription"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/topic_channel_name_tv"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/topic_channel_name_tv"
+        app:layout_goneMarginTop="15dp" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/topic_channel_sd_iv1"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="19.5dp"
+        app:failureImage="@drawable/ic_block_video"
+        app:layout_constraintLeft_toLeftOf="@+id/topic_channel_iv"
+        app:layout_constraintTop_toBottomOf="@+id/topic_channel_iv"
+        app:placeholderImage="@drawable/ic_block_video"
+        app:placeholderImageScaleType="centerCrop"
+        app:roundedCornerRadius="6dp" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/topic_channel_sd_iv2"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="19.5dp"
+        app:failureImage="@drawable/ic_block_video"
+        app:layout_constraintLeft_toRightOf="@+id/topic_channel_sd_iv1"
+        app:layout_constraintTop_toBottomOf="@+id/topic_channel_iv"
+        app:placeholderImage="@drawable/ic_block_video"
+        app:placeholderImageScaleType="centerCrop"
+        app:roundedCornerRadius="6dp" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/topic_channel_sd_iv3"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="19.5dp"
+        app:failureImage="@drawable/ic_block_video"
+        app:layout_constraintLeft_toRightOf="@+id/topic_channel_sd_iv2"
+        app:layout_constraintTop_toBottomOf="@+id/topic_channel_iv"
+        app:placeholderImage="@drawable/ic_block_video"
+        app:placeholderImageScaleType="centerCrop"
+        app:roundedCornerRadius="6dp" />
+
+
+</android.support.constraint.ConstraintLayout>

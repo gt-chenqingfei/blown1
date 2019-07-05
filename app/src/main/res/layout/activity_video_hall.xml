@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_home"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/video_hall_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:scaleType="fitCenter"
+            android:id="@+id/iv_video_hall_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:padding="15dp"
+            android:src="@drawable/ic_back" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            android:padding="15dp"
+            android:src="@drawable/img_title1" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/video_hall_margin_top"
+            android:src="@drawable/img_title2" />
+
+
+        <EditText
+            android:id="@+id/et_activity_video_hall_key"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/et_border_radius_22"
+            android:drawableStart="@drawable/ic_key"
+            android:drawablePadding="14dp"
+            android:gravity="center_vertical"
+            android:hint="@string/string_input_key_hint"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textColor="#cceeeeee"
+            android:singleLine="true"
+            android:textColorHint="#cceeeeee"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_activity_video_hall_open"
+            android:layout_width="match_parent"
+            android:layout_height="44.5dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="14.5dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/bg_btn_black_radius_22"
+            android:gravity="center"
+            android:text="@string/string_video_hall_open"
+            android:textColor="#ffde85"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_activity_video_hall_open_help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="14dp"
+            android:lineSpacingExtra="6sp"
+            android:text="@string/string_video_hall_key_help"
+            android:textColor="#ccffde86"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/tv_activity_video_hall_sofo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/video_hall_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="10dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_sofa" />
+</RelativeLayout>

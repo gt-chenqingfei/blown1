@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_item_home_recommend_interest">
+
+    <RelativeLayout
+        android:id="@+id/item_home_recommend_interest_rl_interest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/item_home_recommend_interest_textview_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/string_want_to_watch"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4.5dp"
+            android:layout_toRightOf="@+id/item_home_recommend_interest_textview_title"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_select_interest" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/item_home_recommend_interest_recyclerview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_home_recommend_interest_textview_title"
+            android:layout_marginTop="17dp" />
+
+        <TextView
+            android:id="@+id/item_home_recommend_interest_textview_ok"
+            android:layout_width="142dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/item_home_recommend_interest_recyclerview"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="8dp"
+            android:clickable="false"
+            android:gravity="center"
+            android:text="@string/string_recommend_these_more"
+            android:textColor="@color/ricebook_color_1"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/item_home_recommend_interest_rl_gotit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/item_home_recommend_interest_imageview_gotit"
+            android:layout_width="135dp"
+            android:layout_height="90dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="45dp"
+            android:src="@drawable/ic_gotit_interest" />
+
+        <TextView
+            android:id="@+id/item_home_recommend_interest_textview_gotit"
+            android:layout_width="54.5dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_home_recommend_interest_imageview_gotit"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/item_home_recommend_interest_textview_gotit_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_home_recommend_interest_textview_gotit"
+            android:layout_marginBottom="27dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:textColor="@color/enjoy_color_2"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/item_home_recommend_interest_textview_gotit_confrim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_home_recommend_interest_textview_gotit_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="21dp"
+            android:layout_marginTop="27dp"
+            android:text="@string/string_ok_shua_j"
+            android:textColor="@color/enjoy_color_2"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

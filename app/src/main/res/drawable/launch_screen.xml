@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:opacity="opaque">
+    <item android:drawable="@drawable/drawalbe_ffef30" />
+    <item>
+        <bitmap
+            android:gravity="top|fill"
+            android:src="@drawable/bg_splash"
+            android:tileMode="repeat" />
+    </item>
+    <item
+        android:gravity="top"
+        android:top="200dp">
+        <bitmap
+            android:gravity="top"
+            android:src="@drawable/logo" />
+    </item>
+    <item
+        android:drawable="@drawable/bg_gradient_splash"
+        android:gravity="bottom"
+        android:top="210dp" />
+
+    <item android:bottom="70dp">
+        <bitmap
+            android:gravity="bottom"
+            android:src="@drawable/launch_slogan" />
+    </item>
+
+</layer-list>
+

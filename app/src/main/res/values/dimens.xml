@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="image_color">28dp</dimen>
+    <dimen name="dp1">1dp</dimen>
+    <dimen name="dp3">3dp</dimen>
+    <dimen name="image_color_margin">6dp</dimen>
+
+    <dimen name="chest_margin">0dp</dimen>
+    <dimen name="video_hall_margin_top">60dp</dimen>
+</resources>

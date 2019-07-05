@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:paddingBottom="30dp"
+    android:paddingTop="25dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/empty_timeline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:src="@drawable/icon_follow_unlogin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/empty_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/string_login_follow_up_master"
+            android:textColor="#b6b6b6"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/empty_timeline" />
+
+        <TextView
+            android:id="@+id/follow_login"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bg_not_follow"
+            android:gravity="center"
+            android:text="@string/string_login_after_login"
+            android:textStyle="bold"
+            android:textColor="@color/ricebook_color_1"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/empty_text"
+            app:layout_constraintStart_toStartOf="@+id/empty_text"
+            app:layout_constraintTop_toBottomOf="@+id/empty_text" />
+
+        <TextView
+            android:id="@+id/follow_login_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:lineSpacingExtra="0sp"
+            android:text="@string/string_pull_show_add"
+            android:textColor="#B6B6B6"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/empty_text" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</RelativeLayout>

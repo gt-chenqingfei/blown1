@@ -1,0 +1,82 @@
+<resources>
+    <string name="app_name">刷刷看</string>
+    <string name="agreement">您已同意<u>《%1$s用户协议》</u></string>
+    <string name="agreement_link">https://dkhsh5.ricebook.com/protocol.html</string>
+    <string name="network_error_msg">网络错误</string>
+    <string name="message_permission_rationale">Grant the following permissions to continue the program:\n\n%1$s</string>
+    <string name="taobao_authorize">淘宝授权</string>
+    <string name="use_date">使用期限：%1$s - %2$s</string>
+    <string name="monthly_sale">月销 %1$s</string>
+    <string name="search_hint_title">搜索商品名或粘贴淘宝商品标题</string>
+    <string name="network_not_available">网络连接不可用</string>
+    <string name="tip_address_count">最多保存 20 个收货地址</string>
+
+    <string name="privacy_statement">登录代表你已同意<u>用户注册协议、用户隐私条款</u></string>
+
+    <string name="no_network_hint">机房网线被柴犬咬断了，你敢信吗？</string>
+
+    <string name="no_data_hint">没获取到最新数据</string>
+
+    <string name="image_trans_name">image</string>
+    <string name="video_trans_name">video</string>
+
+    <string name="is_back_chains_publish">现在离开会丢失已编辑的视频内容，确定要走吗？</string>
+
+    <string name="is_delete_feed">确定删除这个视频吗？</string>
+
+    <!--编辑资料-->
+    <string name="edit_nick_hint">6字以下的昵称更容易被记住</string>
+    <string name="edit_bio_hint">输入你的个性签名更容易被关注哦</string>
+    <string name="edit_nick_max_hint">已超出最大字数限制</string>
+    <string name="edit_bio_max_hint">已超出最大字数限制</string>
+    <string name="is_save_change">是否保存修改？</string>
+    <string name="upload_avatar_success">头像上传成功</string>
+    <string name="upload_avatar_fail">头像上传失败</string>
+    <string name="info_save_success">资料保存成功</string>
+    <string name="info_save_fail">资料保存失败</string>
+
+    <string name="no_attention">暂无关注</string>
+    <string name="no_attention_mine">喜欢TA就去关注嘛</string>
+    <string name="no_attention_other">这宝宝谁也没关注</string>
+    <string name="no_fans">暂无粉丝</string>
+    <string name="no_fans_mine">呜呜，还没有粉丝呢</string>
+    <string name="no_fans_other">快成为关注TA的第一人吧～</string>
+    <string name="no_notify">暂无通知</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="string_confirm_2">确认</string>
+    <string name="string_choose_topic">选择话题</string>
+    <string name="string_third_login">第三方登录</string>
+    <string name="string_login_by_mobile">手机号登录</string>
+    <string name="string_login_right_label">用户注册协议、用户隐私条款</string>
+    <string name="string_no_bind_now">暂不绑定</string>
+    <string name="string_valid_code_error">手机验证码错误</string>
+    <string name="string_login_follow_up_master">登录关注更多优秀UP主</string>
+    <string name="string_pull_show_add">下拉刷新查看最新动态</string>
+    <string name="string_got_home">去首页看别的</string>
+    <string name="str_video_hall_start_explore">开始探索</string>
+    <string name="string_subscript_count">%1$s人订阅</string>
+    <string name="string_video_hall_play_end_tips">这次放映结束了！   \n\n我们还筹备了其它放映厅，记得分享视 频可以触发秘钥。  \n\n你可以订阅这些话题看更多：</string>
+    <string name="string_video_hall_subscript">订阅</string>
+    <string name="strng_video_hall_key_error">错误的密钥，请重新输入</string>
+    <string name="string_video_hall_key_help">如何获取秘钥？</string>
+    <string name="string_video_hall_open">开启放映</string>
+    <string name="string_input_key_hint">请输入秘钥</string>
+    <string name="string_video_help_title">密钥指南</string>
+    <string name="string_video_help_sub_title1">鸟站放映厅是什么？</string>
+    <string name="string_video_help_content1">集中放送全站最厉害的视频，全是你爱看的，包场看到爽！拥有秘钥才能进入。</string>
+    <string name="string_video_help_sub_title2">怎么得到密钥？</string>
+    <string name="string_video_help_content2">分享视频就有可能触发相应密钥。好友通过你的分享链接下载刷刷看APP,触发概率翻倍。</string>
+    <string name="string_video_help_sub_title3">我的密钥能分享给别人吗？</string>
+    <string name="string_video_help_content3">一个密钥仅限5人分享，别浪费哟~</string>
+    <string name="string_dialog_cancel_subscribe_title">取消订阅</string>
+    <string name="string_dialog_cancel_subscribe_desc">确定不再订阅#%s吗？之后就不能第一时间看到这个话题的新动态了哦。</string>
+    <string name="string_dialog_cancel_subscribe_negative">再想想</string>
+    <string name="string_dialog_cancel_subscribe_positive">确定</string>
+
+    <string name="string_dialog_cancel_follow_title">取消关注</string>
+    <string name="string_dialog_cancel_follow_desc">确定不再关注@%s吗？之后就无法在关注页看到TA的动态了哦。</string>
+    <string name="string_dialog_cancel_follow_negative">再想想</string>
+    <string name="string_dialog_cancel_follow_positive">确定</string>
+</resources>

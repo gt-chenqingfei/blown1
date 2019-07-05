@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:layout_marginLeft="7.5dp"
+    android:layout_marginRight="7.5dp"
+    android:layout_marginTop="5dp">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/item_profile_cover"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:roundedCornerRadius="4dp"
+        app:placeholderImage="@color/black"
+        app:failureImage="@color/black"
+        app:roundingBorderColor="@color/black"
+        app:roundingBorderWidth="2dp" />
+
+    <View
+        android:id="@+id/item_profile_cover_bg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/shape_perfect_topic_bg"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/item_profile_cover"
+        app:layout_constraintEnd_toEndOf="@+id/item_profile_cover"
+        app:layout_constraintStart_toStartOf="@+id/item_profile_cover"
+        app:layout_constraintTop_toTopOf="@+id/item_profile_cover" />
+
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/item_profile_choose"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_margin="4dp"
+        app:layout_constraintEnd_toEndOf="@+id/item_profile_cover"
+        app:layout_constraintTop_toTopOf="@+id/item_profile_cover"
+        app:srcCompat="@drawable/selector_item_profile_topic" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/item_profile_talk_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/item_profile_cover"
+        app:layout_constraintTop_toBottomOf="@+id/item_profile_cover"
+        app:srcCompat="@drawable/ic_channel" />
+
+    <TextView
+        android:id="@+id/item_profile_description"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        app:layout_constraintEnd_toEndOf="@+id/item_profile_cover"
+        android:layout_marginTop="5dp"
+        android:lineSpacingExtra="-3sp"
+        android:maxLines="2"
+        android:textColor="@color/black_85"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/item_profile_talk_icon"
+        app:layout_constraintTop_toBottomOf="@+id/item_profile_cover"
+        tools:text="adasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdas" />
+
+
+</android.support.constraint.ConstraintLayout>

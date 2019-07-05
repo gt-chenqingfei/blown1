@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorPrimary</item>
+    <item name="android:windowBackground">@android:color/white</item>
+    <item name="android:actionMenuTextColor">#ffff20</item>
+    <item name="android:actionMenuTextAppearance">@style/MenuTextStyle</item>
+  </style>
+
+  <style name="MenuTextStyle">
+    <item name="android:textSize">16sp</item>
+  </style>
+
+  <style name="BlackBackTheme" parent="AppTheme">
+    <item name="android:windowBackground">@color/colorPrimary</item>
+  </style>
+
+  <style name="EditProfileTheme" parent="BlackBackTheme">
+    <item name="colorAccent">#111217</item>
+  </style>
+
+    <style name="FullScreenTheme.Base" parent="BlackBackTheme">
+    <item name="android:windowNoTitle">true</item>
+    <item name="colorAccent">@android:color/white</item>
+  </style>
+
+
+  <style name="LaunchTheme" parent="AppTheme">
+    <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    <item name="android:statusBarColor">@android:color/transparent</item>
+    <item name="android:navigationBarColor">@android:color/transparent</item>
+    <item name="android:windowBackground">@drawable/launch_screen</item>
+    <item name="android:windowAnimationStyle">@style/AnimationNo</item>
+  </style>
+
+  <style name="WelcomeTheme" parent="AppTheme">
+    <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    <item name="android:statusBarColor">@android:color/transparent</item>
+    <item name="android:navigationBarColor">@android:color/transparent</item>
+    <item name="android:windowBackground">@drawable/bg_welcome</item>
+    <item name="android:windowAnimationStyle">@style/AnimationNo</item>
+  </style>
+
+
+  <style name="FullScreenTheme" parent="FullScreenTheme.Base">
+    <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    <item name="android:statusBarColor">@android:color/transparent</item>
+    <item name="android:navigationBarColor">@android:color/transparent</item>
+    <item name="android:windowContentTransitions">true</item>
+  </style>
+
+  <style name="TopicDetailTheme" parent="FullScreenTheme">
+    <item name="colorAccent">#111217</item>
+  </style>
+
+  <style name="TransitionTheme" parent="AppTheme">
+    <item name="android:windowContentTransitions">true</item>
+  </style>
+</resources>

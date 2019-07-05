@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@null">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/topicCover"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/topicName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/topicSubscribeStatus"
+        app:layout_constraintStart_toEndOf="@+id/topicCover"
+        app:layout_constraintTop_toTopOf="@+id/topicCover"
+        tools:text="RunningMan来了" />
+
+    <TextView
+        android:id="@+id/topicSubscribeDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:textColor="#ff5d6066"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/topicCover"
+        app:layout_constraintEnd_toStartOf="@+id/topicSubscribeStatus"
+        app:layout_constraintStart_toEndOf="@+id/topicCover"
+        tools:text="80组视频集   128人订阅80组视频集   1" />
+
+    <TextView
+        android:id="@+id/topicSubscribeStatus"
+        android:layout_width="56dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/bg_topic_category_subscribe"
+        android:gravity="center"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:text="@string/string_topic_subscribe"
+        android:textColor="@color/color_topic_category_subscribe"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/topicCover"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/topicCover" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1px"
+        android:layout_marginStart="8dp"
+        android:background="#ff323541"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

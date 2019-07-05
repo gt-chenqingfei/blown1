@@ -1,0 +1,54 @@
+apply from: "$rootDir/deps.gradle"
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+android {
+  compileSdkVersion buildConfig.compileSdk
+
+  defaultConfig {
+    minSdkVersion buildConfig.minSdk
+    targetSdkVersion buildConfig.targetSdk
+    versionCode 1
+    versionName "1.0"
+  }
+
+  buildTypes {
+    release {
+    }
+  }
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+}
+
+dependencies {
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
+  implementation project(path: ':api')
+  api(project(':spider')) {
+    exclude group: 'com.android.support'
+  }
+  implementation deps.kotlin.stdlib.jdk
+  implementation deps.android.support.appCompat
+  implementation deps.android.support.constraint
+  implementation deps.autoDispose.android
+  implementation deps.autoDispose.kotlin
+  implementation deps.autoDispose.arch
+  implementation deps.android.support.design
+
+  implementation deps.timber
+  implementation deps.dagger.runtime
+  implementation deps.dagger.androidRuntime
+  implementation deps.dagger.androidSupport
+  implementation deps.epoxy.runtime
+  implementation deps.sensor_analytic
+
+  implementation deps.arrow.core
+  implementation deps.arrow.data
+
+  // retrofit
+  implementation deps.retrofit.client
+  implementation deps.retrofit.converterMoshi
+  implementation deps.retrofit.adapterRx
+}

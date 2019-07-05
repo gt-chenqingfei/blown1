@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".modules.home.HomeActivity">
+
+    <FrameLayout
+        android:id="@+id/home_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/home_navigation_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:gravity="center_vertical">
+
+        <net.lucode.hackware.magicindicator.MagicIndicator
+            android:id="@+id/home_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp" />
+
+        <ImageView
+            android:id="@+id/iv_home_publish"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="93dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_add_special_default" />
+
+        <ImageView
+            android:id="@+id/iv_home_discovery"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="55dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_explore_special_default" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/iv_home_user_avatar"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_avatar_special_default"
+            android:transitionName="@string/image_trans_name"
+            app:placeholderImage="@drawable/ic_avatar_special_default"
+            app:roundAsCircle="true"
+            app:roundingBorderColor="@android:color/white"
+            app:roundingBorderWidth="0dp" />
+
+        <TextView
+            android:id="@+id/tv_home_avatar_badage"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_alignRight="@+id/iv_home_user_avatar"
+            android:layout_alignTop="@+id/iv_home_user_avatar"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="12dp"
+            android:alpha="0"
+            android:background="@drawable/shape_un_read_point"
+            />
+
+        <ImageView
+            android:id="@+id/iv_home_avatar_badage_anim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/iv_home_user_avatar"
+            android:layout_alignTop="@+id/iv_home_user_avatar"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="3dp"
+            android:src="@drawable/ic_unread_anim"
+            android:alpha="0"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

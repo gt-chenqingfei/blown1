@@ -1,0 +1,25 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <com.facebook.drawee.view.SimpleDraweeView
+    android:id="@+id/timeline_profile_type_subscribe_sv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:placeholderImage="@drawable/ic_block_video"
+    app:placeholderImageScaleType="centerCrop"
+    app:roundedCornerRadius="4dp"
+    app:viewAspectRatio="0.75" />
+
+  <ProgressBar
+    android:id="@+id/timeline_video_view_profile_progress"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:layout_gravity="bottom|end"
+    android:visibility="gone"
+    android:indeterminateTint="@color/white"
+    android:padding="10dp" />
+
+</FrameLayout>
+

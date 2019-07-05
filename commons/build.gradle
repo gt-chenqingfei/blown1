@@ -1,0 +1,56 @@
+apply from: "$rootDir/deps.gradle"
+
+apply plugin: 'com.android.library'
+apply plugin: 'org.jetbrains.kotlin.android'
+
+android {
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+
+  compileSdkVersion buildConfig.compileSdk
+
+  defaultConfig {
+    minSdkVersion buildConfig.minSdk
+    targetSdkVersion buildConfig.targetSdk
+    versionCode 1
+    versionName "1.0"
+  }
+
+  buildTypes {
+    release {
+      postprocessing {
+        removeUnusedCode false
+        removeUnusedResources false
+        obfuscate false
+        optimizeCode false
+        proguardFile 'proguard-rules.pro'
+      }
+    }
+  }
+}
+
+dependencies {
+  implementation deps.android.support.annotations
+  implementation deps.android.support.coreUtils
+  implementation deps.android.x.coreKtx
+  implementation deps.kotlin.stdlib.jdk
+  implementation deps.okio
+  implementation deps.moshi
+  implementation deps.timber
+  implementation deps.disklrucache
+  implementation deps.dagger.runtime
+  implementation deps.arrow.core
+  implementation deps.arrow.data
+  compileOnly deps.jsr305
+
+  testImplementation deps.junit
+  testImplementation deps.truth
+//  testImplementation deps.robolectric
+  testImplementation deps.mockit
+}
+
+afterEvaluate {
+  generateReleaseBuildConfig.enabled = false
+}

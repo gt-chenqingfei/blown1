@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_marginRight="9dp"
+    android:orientation="vertical">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/timeline_suscribe_iv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_33"
+        app:placeholderImage="@drawable/ic_block_video"
+        app:placeholderImageScaleType="fitXY"
+        app:roundedCornerRadius="12dp"
+        app:viewAspectRatio="0.75" />
+
+    <ImageView
+        android:id="@+id/timeline_suscribe_iv_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_new_channel_banner_shadow" />
+
+    <TextView
+        android:id="@+id/timeline_suscribe__name_tv"
+        android:layout_width="84dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical"
+        android:maxLines="2"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/timeline_suscribe__num_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginStart="8dp"
+        android:maxLines="1"
+        android:textColor="@color/send_line_color"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

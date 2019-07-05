@@ -1,0 +1,3 @@
+apply from: new File(settingsDir, 'gradle/buildCacheSettings.gradle')
+
+include ':app', ':api', ':jsbridge', ':commons', ':location', ':router-api',  ':base-ui', ':spider', ':build-tool', ':picture_library', ':ucrop'

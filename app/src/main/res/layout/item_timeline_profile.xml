@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="15dp">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/avatar"
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:placeholderImage="@drawable/avatar_default"
+        app:roundAsCircle="true" />
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/color_normal_b6b6b6"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@id/avatar"
+        app:layout_constraintTop_toTopOf="@id/avatar" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_normal_b6b6b6"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@id/text_content"
+        app:layout_constraintTop_toTopOf="@id/user_name" />
+
+    <TextView
+        android:id="@+id/text_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/user_name"
+        app:layout_constraintTop_toBottomOf="@id/time" />
+
+    <LinearLayout
+        android:id="@+id/products_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bg_timeline_product"
+        android:orientation="horizontal"
+        android:paddingBottom="4dp"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:paddingTop="4dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/user_name"
+        app:layout_constraintTop_toBottomOf="@id/text_content">
+
+        <TextView
+            android:id="@+id/product_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawablePadding="4dp"
+            android:drawableStart="@drawable/ic_timeline_goods"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxEms="10"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/product_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="6dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <com.shuashuakan.android.modules.widget.TimeLinePlayerView
+        android:id="@+id/player_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintStart_toStartOf="@id/user_name"
+        app:layout_constraintTop_toBottomOf="@id/products_layout" />
+
+    <LinearLayout
+        android:id="@+id/praise_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="15dp"
+        app:layout_constraintStart_toStartOf="@id/player_view"
+        app:layout_constraintTop_toBottomOf="@id/player_view">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/up_view"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:paddingBottom="9dp"
+            android:paddingTop="1dp"
+            android:scaleType="centerCrop"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/praise_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:textColor="@color/enjoy_color_2"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/comment_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        app:layout_constraintBottom_toBottomOf="@id/praise_layout"
+        app:layout_constraintStart_toEndOf="@id/praise_layout"
+        app:layout_constraintTop_toBottomOf="@id/player_view"
+        app:layout_constraintTop_toTopOf="@id/praise_layout">
+
+        <ImageView
+            android:id="@+id/comment_image"
+            android:layout_width="17dp"
+            android:layout_height="16dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="1dp"
+            android:src="@drawable/ic_timeline_comment" />
+
+        <TextView
+            android:id="@+id/comment_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="6dp"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="0sp"
+            android:textColor="@color/enjoy_color_2"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/share_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        app:layout_constraintBottom_toBottomOf="@id/praise_layout"
+        app:layout_constraintStart_toEndOf="@id/comment_layout"
+        app:layout_constraintTop_toBottomOf="@id/player_view"
+        app:layout_constraintTop_toTopOf="@id/praise_layout">
+
+        <ImageView
+            android:id="@+id/share_image"
+            android:layout_width="17dp"
+            android:layout_height="15.5dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="1dp"
+            android:src="@drawable/ic_timeline_share" />
+
+        <TextView
+            android:id="@+id/share_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="6dp"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="0sp"
+            android:textColor="@color/enjoy_color_2"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/share_layout_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="horizontal"
+        android:paddingEnd="2dp"
+        android:paddingStart="15dp"
+        android:paddingTop="3dp"
+        app:layout_constraintBottom_toBottomOf="@id/praise_layout"
+        app:layout_constraintEnd_toEndOf="@id/text_content"
+        app:layout_constraintTop_toTopOf="@id/praise_layout">
+
+        <ImageView
+            android:id="@+id/share_image_more"
+            android:layout_width="wrap_content"
+            android:layout_height="14dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_toolbar_more" />
+
+        <TextView
+            android:id="@+id/share_text_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="6dp"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="0sp"
+            android:textColor="@color/enjoy_color_2"
+            android:textSize="13sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/item_timeline_profile_rl_comment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_explore_bottom"
+        android:padding="15dp"
+        app:layout_constraintEnd_toEndOf="@id/text_content"
+        app:layout_constraintStart_toStartOf="@id/user_name"
+        app:layout_constraintTop_toBottomOf="@id/praise_layout">
+
+        <TextView
+            android:id="@+id/item_timeline_profile_rl_comment_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_hot_comment_label"
+            android:textColor="@color/color_normal_b6b6b6"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:id="@+id/item_timeline_profile_rl_comment_like_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/item_timeline_profile_rl_comment_title"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/item_timeline_profile_rl_comment_like_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="6dp"
+                android:textColor="@color/enjoy_color_2"
+                android:textSize="10sp" />
+
+            <ImageView
+                android:id="@+id/item_timeline_profile_rl_comment_like_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/news_comment_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_timeline_profile_rl_comment_title"
+            android:layout_marginTop="6dp"
+            android:ellipsize="end"
+            android:lineSpacingExtra="0sp"
+            android:lines="1"
+            android:textColor="@color/color_normal_b6b6b6"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/item_timeline_profile_rl_comment_hot_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/news_comment_tv"
+            android:layout_marginTop="6dp"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/comment_image_tag"
+            android:layout_width="26dp"
+            android:layout_height="14dp"
+            android:layout_alignBottom="@id/item_timeline_profile_rl_comment_hot_pic"
+            android:layout_alignRight="@id/item_timeline_profile_rl_comment_hot_pic"
+            android:background="@drawable/bg_comment_gif_tag"
+            android:text="@string/string_long_picture"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/item_timeline_profile_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/color_normal_28292d"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/item_timeline_profile_rl_comment" />
+</android.support.constraint.ConstraintLayout>

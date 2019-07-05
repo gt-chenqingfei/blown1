@@ -1,0 +1,12 @@
+walle {
+  // 指定渠道包的输出路径
+  apkOutputFolder = new File("${project.buildDir}/outputs/channels")
+  // 定制渠道包的APK的文件名称
+  apkFileNameFormat = 'fish-v${versionName}-${channel}-${buildTime}-${buildType.toUpperCase()}.apk'
+  // 渠道配置文件
+  channelFile = new File("${rootDir}/scripts/channels.txt")
+}
+
+tasks.create(name: 'makeAllApks', group: 'Package',
+    description: 'Make all apks with given channel name, by walle',
+    dependsOn: 'assembleReleaseChannels')

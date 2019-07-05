@@ -1,0 +1,14 @@
+def versionMajor = 1
+def versionMinor = 3
+def versionPatch = 2
+// bump for dogfood builds, public betas, etc.
+def versionBuild = 0
+
+def versionName = "${versionMajor}.${versionMinor}.${versionPatch}"
+def versionCode = versionMajor * 10000 + versionMinor * 1000 + versionPatch * 100 + versionBuild
+
+ext {
+    VERSION_NAME = versionName
+    VERSION_CODE = versionCode
+    VERSION_BUILD = versionBuild
+}

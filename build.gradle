@@ -1,0 +1,100 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlin_version = '1.2.71'
+    ext.booster_version = '0.3.2'
+    repositories {
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url 'https://dl.bintray.com/zouyuhan/maven' }
+        maven { url 'http://developer.huawei.com/repo/' }
+        maven { url 'https://maven.fabric.io/public' }
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.meituan.android.walle:plugin:1.1.6'
+        classpath 'com.android.tools.build:gradle:3.1.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlin_version}"
+        classpath 'com.tencent.bugly:symtabfileuploader:2.2.1'
+        classpath 'com.sensorsdata.analytics.android:android-gradle-plugin2:1.0.3'
+        classpath 'io.fabric.tools:gradle:1.+'
+//        classpath 'com.google.gms:google-services:4.0.1'
+//        classpath 'com.google.firebase:firebase-plugins:1.1.5'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+
+//        classpath "com.didiglobal.booster:booster-gradle-plugin:$booster_version"
+//        classpath "com.didiglobal.booster:booster-task-all:$booster_version"
+//        classpath "com.didiglobal.booster:booster-transform-all:$booster_version"
+    }
+}
+
+allprojects {
+    repositories {
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        google()
+        jcenter()
+        maven {
+            url "http://repo.baichuan-android.taobao.com/content/groups/BaichuanRepositories/"
+        }
+        maven {
+            url 'https://dl.bintray.com/zouyuhan/maven'
+        }
+        maven {
+            url "https://jitpack.io"
+        }
+        maven {
+            url 'https://maven.fabric.io/public'
+        }
+    }
+
+    // Force all of the primary support libraries to use the same version.
+    configurations.all {
+        resolutionStrategy {
+            eachDependency { details ->
+                if (details.requested.group == 'com.android.support' && !details.requested.name.startsWith('multidex')) {
+                    details.useVersion versions.supportLibrary
+                }
+            }
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+def gitSha() {
+    def f = new File(buildDir, "commit-sha.txt")
+    if (!f.exists()) {
+        def p = 'git rev-parse HEAD'.execute([], project.rootDir)
+        if (p.waitFor() != 0) {
+            throw new RuntimeException(p.errorStream.text)
+        }
+        f.parentFile.mkdirs()
+        f.text = p.text.trim()
+    }
+    return f.text.trim()
+}
+
+def gitTimestamp() {
+    def f = new File(buildDir, "commit-timestamp.txt")
+    if (!f.exists()) {
+        def p = 'git log -n 1 --format=%at'.execute([], rootDir)
+        if (p.waitFor() != 0) {
+            throw new RuntimeException(p.errorStream.text)
+        }
+        f.parentFile.mkdirs()
+        f.text = p.text.trim()
+    }
+    return f.text.trim()
+}
+
+
+ext.buildConfig = [
+        'compileSdk': 28,
+        'minSdk'    : 21,
+        'targetSdk' : 28,
+]

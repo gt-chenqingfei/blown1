@@ -1,0 +1,212 @@
+ext.versions = [
+        'supportLibrary': '27.1.1',
+        'multidex'      : '1.0.3',
+        'okhttp'        : '3.11.0',
+        'retrofit'      : '2.4.0',
+        'dagger'        : '2.16',
+//        'fresco'        : '1.9.0',
+        'fresco'        : '1.13.0',
+        'soloader'      : '0.5.1',
+        'kotshi'        : '1.0.4',
+        'arrow'         : '0.6.1',
+        'stetho'        : '1.5.0',
+        'linker'        : '0.0.5',
+        'autoDispose'   : '0.6.1',
+        'epoxy'         : '2.14.0',
+        'bugly'         : '1.3.4',
+        'exoplayer'     : '2.9.0',
+        'jpush'         : '3.1.8',
+        'arch'          : '1.1.1',
+        'room'          : '1.1.1',
+        'lottie'        : '2.6.1'
+]
+
+ext.deps = [
+        'kotlin'            : [
+                'stdlib': [
+                        'jdk': "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlin_version}",
+                ],
+        ],
+        'android'           : [
+                'arch'   : [
+
+                        'room'     : [
+                                'runtime' : "android.arch.persistence.room:runtime:${versions.room}",
+                                'compiler': "android.arch.persistence.room:compiler:${versions.room}",
+                                'rxjava'  : "android.arch.persistence.room:rxjava2:${versions.room}"
+                        ],
+
+                        'lifecycle': [
+                                'runtime'   : "android.arch.lifecycle:runtime:${versions.arch}",
+                                'compiler'  : "android.arch.lifecycle:compiler:${versions.arch}",
+                                'extensions': "android.arch.lifecycle:extensions:${versions.arch}",
+                                'java8'     : "android.arch.lifecycle:common-java8:${versions.arch}",
+                                'livedata'  : "android.arch.lifecycle:livedata-core:${versions.arch}",
+                                'viewmodel' : "android.arch.lifecycle:viewmodel:${versions.arch}"
+                        ]
+
+                ],
+
+                'support': [
+                        'multidex'    : "com.android.support:multidex:${versions.multidex}",
+                        'annotations' : "com.android.support:support-annotations:${versions.supportLibrary}",
+                        'coreUtils'   : "com.android.support:support-core-utils:${versions.supportLibrary}",
+                        'compat'      : "com.android.support:support-compat:${versions.supportLibrary}",
+                        'recyclerView': "com.android.support:recyclerview-v7:${versions.supportLibrary}",
+                        'appCompat'   : "com.android.support:appcompat-v7:${versions.supportLibrary}",
+                        'design'      : "com.android.support:design:${versions.supportLibrary}",
+                        "constraint"  : "com.android.support.constraint:constraint-layout:1.1.3",
+                        'palette'     : "com.android.support:palette-v7:${versions.supportLibrary}"
+                ],
+                'x'      : [
+                        'coreKtx': 'androidx.core:core-ktx:0.2',
+                ],
+                'test'   : [
+                        'runner': "com.android.support.test:runner:${versions.atsl}",
+                        'rules' : "com.android.support.test:rules${versions.atsl}",
+                ],
+        ],
+        'okhttp'            : [
+                'client'       : "com.squareup.okhttp3:okhttp:${versions.okhttp}",
+                'logging'      : "com.squareup.okhttp3:logging-interceptor:${versions.okhttp}",
+                'mockWebServer': "com.squareup.okhttp3:mockwebserver:${versions.okhttp}",
+        ],
+        'retrofit'          : [
+                'client'        : "com.squareup.retrofit2:retrofit:${versions.retrofit}",
+                'converterMoshi': "com.squareup.retrofit2:converter-moshi:${versions.retrofit}",
+                'adapterRx'     : "com.squareup.retrofit2:adapter-rxjava2:${versions.retrofit}"
+        ],
+        'rx'                : [
+                'kotlin' : 'io.reactivex.rxjava2:rxkotlin:2.2.0',
+                'java'   : 'io.reactivex.rxjava2:rxjava:2.1.9',
+                'android': 'io.reactivex.rxjava2:rxandroid:2.0.2@aar',
+                'relay'  : 'com.jakewharton.rxrelay2:rxrelay:2.0.0',
+                'binding': 'com.jakewharton.rxbinding2:rxbinding:2.0.0',
+        ],
+        'kotshi'            : [
+                'api'     : "se.ansman.kotshi:api:${versions.kotshi}",
+                'compiler': "se.ansman.kotshi:compiler:${versions.kotshi}",
+        ],
+        'dagger'            : [
+                'runtime'        : "com.google.dagger:dagger:${versions.dagger}",
+                'androidRuntime' : "com.google.dagger:dagger-android:${versions.dagger}",
+                'androidSupport' : "com.google.dagger:dagger-android-support:${versions.dagger}",
+                'androidCompiler': "com.google.dagger:dagger-android-processor:${versions.dagger}",
+                'compiler'       : "com.google.dagger:dagger-compiler:${versions.dagger}",
+        ],
+        'fresco'            : [
+                'soloader'     : "com.facebook.soloader:soloader:${versions.soloader}",
+                'fresco'       : "com.facebook.fresco:fresco:${versions.fresco}",
+                'frescoOkhttp' : "com.facebook.fresco:imagepipeline-okhttp3:${versions.fresco}",
+                'animated_gif' : "com.facebook.fresco:animated-gif:${versions.fresco}",
+                'webpsupport'  : "com.facebook.fresco:webpsupport:${versions.fresco}",
+                'webp_animated': "com.facebook.fresco:animated-webp:${versions.fresco}"
+        ],
+        'arrow'             : [
+                'core': "io.arrow-kt:arrow-core:${versions.arrow}",
+                'data': "io.arrow-kt:arrow-data:${versions.arrow}"
+        ],
+        'stetho'            : [
+                'core'  : "com.facebook.stetho:stetho:${versions.stetho}",
+                'okhttp': "com.facebook.stetho:stetho-okhttp3:${versions.stetho}"
+        ],
+        'linker'            : [
+                'runtime' : "me.twocities:linker:${versions.linker}",
+                'compiler': "me.twocities:linker-compiler:${versions.linker}"
+        ],
+
+        'bugly'             : [
+                'sdk': "com.tencent.bugly:crashreport_upgrade:${versions.bugly}"
+        ],
+
+        'autoDispose'       : [
+                'android': "com.uber.autodispose:autodispose-android:${versions.autoDispose}",
+                'kotlin' : "com.uber.autodispose:autodispose-kotlin:${versions.autoDispose}",
+                'arch'   : "com.uber.autodispose:autodispose-android-archcomponents-kotlin:${versions.autoDispose}",
+        ],
+
+        'autoValue'         : [
+                'compiler'   : 'com.google.auto.value:auto-value:1.3',
+                'annotations': 'com.jakewharton.auto.value:auto-value-annotations:1.3',
+        ],
+        'ricebook'          : [
+                'ricebookCore' : 'com.ricebook.android:core:0.1.10',
+                'ricebookGuava': 'com.ricebook.android:guava:0.0.1-SNAPSHOT',
+        ],
+
+        'epoxy'             : [
+                'runtime' : "com.airbnb.android:epoxy:${versions.epoxy}",
+                'compiler': "com.airbnb.android:epoxy-processor:${versions.epoxy}"
+        ],
+        'disklrucache'      : 'com.jakewharton:disklrucache:2.0.2',
+        'okio'              : 'com.squareup.okio:okio:1.15.0',
+        'moshi'             : 'com.squareup.moshi:moshi:1.6.0',
+        'timber'            : 'com.jakewharton.timber:timber:4.7.1',
+        'walle'             : 'com.meituan.android.walle:library:1.1.6',
+//        'robolectric'       : 'org.robolectric:robolectric:3.8',
+        'mockit'            : 'org.mockito:mockito-core:2.9.0',
+        'junit'             : 'junit:junit:4.12',
+        'truth'             : 'com.google.truth:truth:0.39',
+        'jsr305'            : 'com.google.code.findbugs:jsr305:3.0.0',
+        'gson'              : 'com.google.code.gson:gson:2.8.5',
+
+        'amap'              : [
+                'location': 'com.amap.api:location:4.2.0'],
+//        'location': 'com.amap.api:location:latest.integration'],
+
+        'umeng'             : [
+                'common'    : 'com.umeng.sdk:common:1.5.0',
+                'analytics' : 'com.umeng.sdk:analytics:7.5.0',
+                'share_core': 'com.umeng.sdk:share-core:6.9.0',
+                'qq'        : 'com.umeng.sdk:share-qq:6.9.0',
+                'wechat'    : 'com.umeng.sdk:share-wechat:6.9.1'
+        ],
+
+        'sensor_analytic'   : 'com.sensorsdata.analytics.android:SensorsAnalyticsSDK:1.10.7',
+
+        'exoplayer'         : [
+                'core'            : "com.google.android.exoplayer:exoplayer-core:${versions.exoplayer}",
+                'okhttp_extension': "com.google.android.exoplayer:extension-okhttp:${versions.exoplayer}",
+                'hls'             : "com.google.android.exoplayer:exoplayer-hls:${versions.exoplayer}",
+                'ui'              : "com.google.android.exoplayer:exoplayer-ui:${versions.exoplayer}"
+        ],
+        'jpush'             : [
+                'jpush'         : "cn.jiguang.sdk:jpush:${versions.jpush}",
+                'jcore'         : 'cn.jiguang.sdk:jcore:1.2.6',
+                'jmessage'      : 'cn.jiguang.sdk:jmessage:2.7.0',
+                'huawei_support': "cn.jiguang.sdk.plugin:huawei:${versions.jpush}",
+                'meizu_support' : "cn.jiguang.sdk.plugin:meizu:${versions.jpush}",
+                'xiaomi_support': "cn.jiguang.sdk.plugin:xiaomi:${versions.jpush}",
+                'oppo_support'  : "cn.jiguang.sdk.plugin:oppo:${versions.jpush}"
+        ],
+        'easy_recycler_view': 'com.jude:easyrecyclerview:4.4.2',
+        'magic_indicator'   : 'com.github.hackware1993:MagicIndicator:1.5.0',
+        'round_view'        : 'com.flyco.roundview:FlycoRoundView_Lib:1.1.4@aar',
+        'picker_view'       : 'com.contrarywind:Android-PickerView:4.1.7',
+        'photo_view'        : 'com.github.chrisbanes:PhotoView:2.0.0',
+        'rx_permission'     : 'com.github.tbruyelle:rxpermissions:0.10.2',
+        'qiniu'             : [
+                'object_storage': 'com.qiniu:qiniu-android-sdk:7.3.13'
+        ],
+        'flexbox'           : 'com.google.android:flexbox:1.0.0',
+        'brvah'             : 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.46',
+        'immersionbar'      : 'com.gyf.immersionbar:immersionbar:2.3.3-beta15',
+        'lottie'            : "com.airbnb.android:lottie:${versions.lottie}",
+        'spiderman'         : [ // 显示崩溃日志 https://github.com/simplepeng/SpiderMan
+                                'spiderman'     : 'com.simple:spiderman:1.0.8',
+                                'spiderman_noop': 'com.simple:spiderman-no-op:1.0.8'
+        ],
+        'leakcanary'        : [ // 内存泄漏检测 https://github.com/square/leakcanary
+                                'leakcanary'         : 'com.squareup.leakcanary:leakcanary-android:1.6.3',
+                                'leakcanary_noop'    : 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.3',
+                                'leakcanary_fragment': 'com.squareup.leakcanary:leakcanary-support-fragment:1.6.3'
+        ],
+        'arialyy'           : 'com.arialyy.aria:Aria:3.1.4',
+        'fabric'            : 'com.crashlytics.sdk.android:crashlytics:2.9.9@aar',
+        'cardview'          : 'com.android.support:cardview-v7:26.1.0',
+//    'firebase':'com.google.firebase:firebase-core:16.0.6',
+//    'firebaseper':'com.google.firebase:firebase-perf:16.2.3'
+
+        'danmaku'           : 'com.github.ctiao:DanmakuFlameMaster:0.9.25',
+        'danmaku_armv5a'    : 'com.github.ctiao:ndkbitmap-armv5:0.9.21'
+]

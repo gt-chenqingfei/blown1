@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/colorPrimary"
+  android:fitsSystemWindows="true">
+
+  <android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:navigationIcon="@drawable/ic_arrow_back"
+      app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <TextView
+      android:id="@+id/textView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="10dp"
+      android:layout_marginTop="10dp"
+      android:text="@string/string_comment_with_chanel"
+      android:textColor="@color/white"
+      android:textSize="24sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <EditText
+      android:id="@+id/channel_id_et"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:layout_marginRight="10dp"
+      android:ems="10"
+      android:hint="@string/string_input_chanel_id"
+      android:inputType="textPostalAddress"
+      android:textColor="@color/white"
+      android:textColorHint="@color/white"
+      android:theme="@style/whiteLineEditText"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="@+id/textView"
+      app:layout_constraintTop_toBottomOf="@id/textView"
+      tools:layout_editor_absoluteY="82dp" />
+
+    <Button
+      android:id="@+id/get_video_btn"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:text="@string/string_get_video_with_chnanel"
+      app:layout_constraintStart_toStartOf="@id/textView"
+      app:layout_constraintTop_toBottomOf="@id/channel_id_et" />
+
+    <Button
+      android:id="@+id/add_comment_edit"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:layout_marginRight="10dp"
+      android:text="@string/string_add_comment_with_add"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/channel_id_et" />
+
+    <Button
+      android:id="@+id/minus_comment_edit"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginRight="10dp"
+      android:text="@string/string_delete_comment_with_mute"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/add_comment_edit" />
+
+    <TextView
+      android:id="@+id/textView2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="10dp"
+      android:layout_marginTop="10dp"
+      android:text="@string/string_comment_with_random"
+      android:textColor="@color/white"
+      android:textSize="24sp"
+      app:layout_constraintStart_toStartOf="@id/textView"
+      app:layout_constraintTop_toBottomOf="@id/get_video_btn" />
+
+    <LinearLayout
+      android:id="@+id/edit_ll"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginRight="10dp"
+      android:orientation="vertical"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="@id/textView"
+      app:layout_constraintTop_toBottomOf="@id/textView2">
+
+      <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="@string/string_please_input_comment_content"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:theme="@style/whiteLineEditText" />
+    </LinearLayout>
+
+  </android.support.constraint.ConstraintLayout>
+</ScrollView>

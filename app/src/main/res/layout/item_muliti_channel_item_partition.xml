@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/mTopicName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="#橄榄球热血精华" />
+
+    <TextView
+        android:id="@+id/mTopicNameSubscribeStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:background="@drawable/bg_explore_un_follow"
+        android:gravity="center"
+        android:paddingLeft="9.5dp"
+        android:layout_marginEnd="15dp"
+        android:paddingRight="9.5dp"
+        android:text="@string/string_subscription"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/mTopicLeftImage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="7.5dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="6dp"
+        android:background="@color/bar_grey"
+        app:failureImage="@drawable/ic_block_video"
+        app:layout_constraintEnd_toStartOf="@+id/mTopicRightImage"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mTopicName"
+        app:placeholderImage="@drawable/ic_block_video"
+        app:roundedCornerRadius="4dp"
+        app:viewAspectRatio="1.5" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/mTopicRightImage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="7.5dp"
+        android:layout_marginTop="6dp"
+        android:background="@color/bar_grey"
+        app:failureImage="@drawable/ic_block_video"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mTopicLeftImage"
+        app:layout_constraintTop_toBottomOf="@+id/mTopicName"
+        app:placeholderImage="@drawable/ic_block_video"
+        app:roundedCornerRadius="4dp"
+        app:viewAspectRatio="1.5" />
+
+    <TextView
+        android:id="@+id/mTopicLeftContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mTopicLeftImage"
+        tools:text="#橄榄球热血精华" />
+
+
+    <TextView
+        android:id="@+id/mTopicRightContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="@+id/mTopicRightImage"
+        app:layout_constraintTop_toBottomOf="@+id/mTopicRightImage"
+        tools:text="#橄榄球热血精华" />
+
+
+</android.support.constraint.ConstraintLayout>

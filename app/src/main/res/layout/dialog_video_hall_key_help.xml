@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:background="@drawable/bg_popup"
+        android:id="@+id/card_layout"
+        android:layout_width="304dp"
+        android:layout_height="407dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="35dp"
+            android:gravity="center_horizontal"
+            android:textSize="16sp"
+            android:textColor="#592f0a"
+            android:lineSpacingExtra="0sp"
+            android:textStyle="bold"
+            android:text="@string/string_video_help_title"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="29.5dp"
+            android:textColor="#592f0a"
+            android:lineSpacingExtra="0sp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:text="@string/string_video_help_sub_title1"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.5dp"
+            android:textSize="14sp"
+            android:textColor="#80581f"
+            android:lineSpacingExtra="6sp"
+            android:text="@string/string_video_help_content1"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="29.5dp"
+            android:textColor="#592f0a"
+            android:lineSpacingExtra="0sp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:text="@string/string_video_help_sub_title2"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.5dp"
+            android:textSize="14sp"
+            android:textColor="#80581f"
+            android:lineSpacingExtra="6sp"
+            android:text="@string/string_video_help_content2"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="29.5dp"
+            android:textColor="#592f0a"
+            android:lineSpacingExtra="0sp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:text="@string/string_video_help_sub_title3"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.5dp"
+            android:textSize="14sp"
+            android:textColor="#80581f"
+            android:lineSpacingExtra="6sp"
+            android:text="@string/string_video_help_content3"/>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_dialog_video_key_help_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:padding="10dp"
+        android:src="@drawable/ic_close1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_layout" />
+
+</android.support.constraint.ConstraintLayout>

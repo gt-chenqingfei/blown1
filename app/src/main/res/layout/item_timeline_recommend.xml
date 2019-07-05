@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.flyco.roundview.RoundLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="15dp"
+    android:layout_marginLeft="12dp"
+    android:layout_marginRight="12dp"
+    android:orientation="vertical"
+    app:rv_backgroundColor="@color/colorAccent"
+    app:rv_cornerRadius="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="14dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="14dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/user_avatar"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            app:failureImage="@drawable/avatar_default"
+            app:placeholderImage="@drawable/avatar_default"
+            app:roundAsCircle="true" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/recommend_reason"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:lineSpacingExtra="0sp"
+                android:text=""
+                android:textColor="@color/color_normal_b6b6b6"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <com.shuashuakan.android.modules.widget.FollowButton
+            android:id="@+id/follow_btn"
+            android:layout_width="68dp"
+            android:layout_height="26dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="154dp">
+
+        <FrameLayout
+            android:id="@+id/feed_one_fl"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/feed_one_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:roundBottomLeft="true"
+                app:roundBottomRight="false"
+                app:roundTopLeft="false"
+                app:roundTopRight="false"
+                app:roundWithOverlayColor="@color/colorPrimary"
+                app:roundedCornerRadius="10dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black10" />
+
+            <TextView
+                android:id="@+id/feed_one_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:layout_marginBottom="4dp"
+                android:layout_marginRight="4dp"
+                android:drawableLeft="@drawable/ic_like_profile"
+                android:drawablePadding="4dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/feed_two_fl"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="3dp"
+            android:layout_weight="1">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/feed_two_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:roundBottomLeft="false"
+                app:roundBottomRight="false"
+                app:roundTopLeft="false"
+                app:roundTopRight="false"
+                app:roundWithOverlayColor="@color/colorPrimary" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black10" />
+
+            <TextView
+                android:id="@+id/feed_two_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:layout_marginBottom="4dp"
+                android:layout_marginRight="4dp"
+                android:drawableLeft="@drawable/ic_like_profile"
+                android:drawablePadding="4dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/feed_three_fl"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="3dp"
+            android:layout_weight="1">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/feed_three_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:roundBottomLeft="false"
+                app:roundBottomRight="true"
+                app:roundTopLeft="false"
+                app:roundTopRight="false"
+                app:roundWithOverlayColor="@color/colorPrimary"
+                app:roundedCornerRadius="10dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black10" />
+
+            <TextView
+                android:id="@+id/feed_three_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:layout_marginBottom="4dp"
+                android:layout_marginRight="4dp"
+                android:drawableLeft="@drawable/ic_like_profile"
+                android:drawablePadding="4dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+</com.flyco.roundview.RoundLinearLayout>

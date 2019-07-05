@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!--<string name="UMENG_APPKEY">5ab475b2a40fa321260000c7</string>-->
+  <!--<string name="QQ_ID">1107388303</string>-->
+  <!--<string name="QQ_KEY">KEYYiQWEaZ4gTDIeW1x</string>-->
+  <!--<string name="WX_ID">wxdc1e388c3822c80b</string>-->
+  <!--<string name="WX_KEY">3baf1193c85774b3fd9d18447d76cab0</string>-->
+  <!--<string name="amap_key">ba2b29b82b8a179f2c1ba4f57fa06ff9</string>-->
+  <!--<string name="sensor_scheme">sadb9d1fa9</string>-->
+
+
+  <!--<string name="WX_ID">wx7a14741094f8ae6b</string>-->
+  <!--<string name="WX_KEY">502b44375fa904b32e77e8c8decd6854</string>-->
+
+  <string name="UMENG_APPKEY" translatable="false">5b62c48bb27b0a02030001e8</string>
+  <string name="QQ_ID" translatable="false">1107388303</string>
+  <string name="QQ_KEY" translatable="false">KEYYiQWEaZ4gTDIeW1x</string>
+  <string name="WX_ID" translatable="false">wxf4231525bf1d3053</string>
+  <string name="WX_KEY" translatable="false">1b3b788e560c66923a49849ba05a1de5</string>
+</resources>

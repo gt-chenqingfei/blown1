@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <ImageView
+    android:visibility="gone"
+    android:id="@+id/blur_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <com.facebook.drawee.view.SimpleDraweeView
+    android:visibility="gone"
+    android:id="@+id/timeline_subscribe_sv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:placeholderImage="@drawable/ic_block_video"
+    app:placeholderImageScaleType="centerCrop"
+    app:roundedCornerRadius="0dp"
+    app:viewAspectRatio="0.75" />
+
+  <com.shuashuakan.android.modules.player.VideoPlayer
+    android:id="@+id/texture_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

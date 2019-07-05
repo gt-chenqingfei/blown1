@@ -1,0 +1,82 @@
+image: hub.ricebook.net/base/ubuntu:android-latest
+
+cache:
+  paths:
+    - .m2/
+    - .gradle/
+
+stages:
+  - assemble
+  - kultiras
+
+buildmaster:
+  only:
+    - master
+  stage: assemble
+  before_script:
+    - export GRADLE_USER_HOME=`pwd`/.gradle
+    - echo "sdk.dir=$ANDROID_HOME" > local.properties
+    - source scripts/ciEnvSetup.sh && copyEnvVarsToGradleProperties
+    - export http_proxy=proxy.ricebook.net:8118
+    - export https_proxy=proxy.ricebook.net:8118
+  script: ./gradlew assembleRelease
+  cache:
+    key: $CI_PROJECT_NAME
+    paths:
+      - .gradle/wrapper
+      - .gradle/caches
+  artifacts:
+    paths:
+      - app/build/outputs/
+
+stormsongmaster:
+  image: hub.ricebook.net/service/apkbuilder:soulshard
+  only:
+    - master
+  stage: kultiras
+  dependencies:
+    - buildmaster
+  script:
+    - mkdir -p app/build/pkgs
+    - APKNAME=$(ls $CI_PROJECT_DIR/app/build/outputs/apk/release/duck-*-release.apk)
+    - echo $APKNAME
+    - mv $APKNAME $CI_PROJECT_DIR/app/build/outputs/apk/release/duck-RAW-release.apk
+    - python /build/scripts/package.py walle --apk=$CI_PROJECT_DIR/app/build/outputs/apk/release/duck-RAW-release.apk --channel_file=scripts/channels.txt --output=app/build/pkgs
+    - ls app/build/pkgs
+    - python /build/scripts/upload.py 'app/build/*/*.apk' 'app/build/outputs/apk/release/duck-RAW-release.apk'
+
+builddevelop:
+  except:
+    - master
+  stage: assemble
+  before_script:
+    - export GRADLE_USER_HOME=`pwd`/.gradle
+    - echo "sdk.dir=$ANDROID_HOME" > local.properties
+    - source scripts/ciEnvSetup.sh && copyEnvVarsToGradleProperties
+    - export http_proxy=proxy.ricebook.net:8118
+    - export https_proxy=proxy.ricebook.net:8118
+  script: ./gradlew assembleDebug
+  cache:
+    key: $CI_PROJECT_NAME
+    paths:
+      - .gradle/wrapper
+      - .gradle/caches
+  artifacts:
+    paths:
+      - app/build/outputs/
+
+stormsongdevelop:
+  image: hub.ricebook.net/service/apkbuilder:soulshard
+  except:
+    - master
+  stage: kultiras
+  dependencies:
+    - builddevelop
+  script:
+    - mkdir -p app/build/pkgs
+    - APKNAME=$(ls $CI_PROJECT_DIR/app/build/outputs/apk/debug/duck-*-debug.apk)
+    - echo $APKNAME
+    - mv $APKNAME $CI_PROJECT_DIR/app/build/outputs/apk/debug/duck-RAW-debug.apk
+    - python /build/scripts/package.py walle --apk=$CI_PROJECT_DIR/app/build/outputs/apk/debug/duck-RAW-debug.apk --channel_file=scripts/channels.txt --output=app/build/pkgs
+    - ls app/build/pkgs
+    - python /build/scripts/upload.py 'app/build/*/*.apk' 'app/build/outputs/apk/debug/duck-RAW-debug.apk'

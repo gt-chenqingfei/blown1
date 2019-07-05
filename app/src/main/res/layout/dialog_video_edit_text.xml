@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:onClick="onCloseChoseCover"
+            android:padding="15dp"
+            android:src="@drawable/ic_record_close" />
+
+        <ImageView
+            android:id="@+id/done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="15dp"
+            android:onClick="onSaveChoseCover"
+            android:padding="15dp"
+            android:src="@drawable/ic_edit_save" />
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/et_text"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="22dp"
+        android:layout_weight="1"
+        android:background="@null"
+        android:gravity="center"
+        android:textSize="24sp" />
+
+    <com.shuashuakan.android.modules.publisher.view.IMGColorGroup
+        android:id="@+id/cg_colors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:checkedButton="@+id/cr_white"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.shuashuakan.android.modules.publisher.view.IMGColorRadio
+            android:id="@+id/cr_white"
+            android:layout_width="@dimen/image_color"
+            android:layout_height="@dimen/image_color"
+            android:layout_margin="@dimen/image_color_margin"
+            app:image_color="@color/white" />
+
+        <com.shuashuakan.android.modules.publisher.view.IMGColorRadio
+            android:layout_width="@dimen/image_color"
+            android:layout_height="@dimen/image_color"
+            android:layout_margin="@dimen/image_color_margin"
+            app:image_color="@color/black" />
+
+        <com.shuashuakan.android.modules.publisher.view.IMGColorRadio
+            android:layout_width="@dimen/image_color"
+            android:layout_height="@dimen/image_color"
+            android:layout_margin="@dimen/image_color_margin"
+            app:image_color="@color/orangey_red" />
+
+        <com.shuashuakan.android.modules.publisher.view.IMGColorRadio
+            android:layout_width="@dimen/image_color"
+            android:layout_height="@dimen/image_color"
+            android:layout_margin="@dimen/image_color_margin"
+            app:image_color="@color/color_ffef30" />
+
+        <com.shuashuakan.android.modules.publisher.view.IMGColorRadio
+            android:layout_width="@dimen/image_color"
+            android:layout_height="@dimen/image_color"
+            android:layout_margin="@dimen/image_color_margin"
+            app:image_color="@color/comment_send_color" />
+
+        <com.shuashuakan.android.modules.publisher.view.IMGColorRadio
+            android:layout_width="@dimen/image_color"
+            android:layout_height="@dimen/image_color"
+            android:layout_margin="@dimen/image_color_margin"
+            app:image_color="@color/color_normal_0ba7ff" />
+
+        <com.shuashuakan.android.modules.publisher.view.IMGColorRadio
+            android:layout_width="@dimen/image_color"
+            android:layout_height="@dimen/image_color"
+            android:layout_margin="@dimen/image_color_margin"
+            app:image_color="@color/color_normal_2e11ff" />
+
+        <com.shuashuakan.android.modules.publisher.view.IMGColorRadio
+            android:layout_width="@dimen/image_color"
+            android:layout_height="@dimen/image_color"
+            android:layout_margin="@dimen/image_color_margin"
+            app:image_color="@color/color_normal_fd00ff" />
+
+    </com.shuashuakan.android.modules.publisher.view.IMGColorGroup>
+</LinearLayout>

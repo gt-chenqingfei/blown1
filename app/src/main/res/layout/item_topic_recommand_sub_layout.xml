@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/mTopicTopDynamicNameView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        android:drawableLeft="@drawable/ic_channel"
+        android:drawablePadding="4dp"
+        android:lineSpacingExtra="0sp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="无边泳池很美丽最长12个字" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/mTopicDynamicHorizontalRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/mTopicDynamicLineView"
+        app:layout_constraintTop_toBottomOf="@+id/mTopicTopDynamicNameView" />
+
+    <View
+        android:id="@+id/mTopicDynamicLineView"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="15dp"
+        android:visibility="gone"
+        android:background="@color/color_normal_e0e0e0_5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mTopicDynamicHorizontalRecyclerView" />
+
+
+    <View
+        android:id="@+id/holderView"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:visibility="gone"
+        android:layout_marginTop="15dp"
+        android:background="@color/color_normal_0d0d0d"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mTopicDynamicHorizontalRecyclerView" />
+
+
+</android.support.constraint.ConstraintLayout>

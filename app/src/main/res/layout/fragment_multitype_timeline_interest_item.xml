@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="138dp"
+    android:layout_height="170dp"
+    android:layout_marginEnd="9dp"
+    android:background="@drawable/bg_timeline_interest"
+    android:orientation="vertical">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/avatar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_avatar_oval"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:placeholderImage="@drawable/avatar_default"
+        app:roundAsCircle="true" />
+
+    <ImageView
+        android:id="@+id/iv_timeline_interest_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="5dp"
+        android:src="@drawable/ic_close_timeline_interest"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/avatar" />
+
+    <TextView
+        android:id="@+id/tv_timeline_interest_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:maxLines="1"
+        android:text="@string/string_name_label"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avatar" />
+
+    <TextView
+        android:id="@+id/tv_timeline_interest_name_describe"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:maxLines="2"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:text="@string/temp_name"
+        android:textColor="#838791"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_timeline_interest_name" />
+
+    <LinearLayout
+        android:id="@+id/topic_channel_subscribe_ll"
+        android:layout_width="118dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/bg_not_follow"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_timeline_interest_name_describe">
+
+        <ImageView
+            android:id="@+id/topic_channel_subscribe_iv"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/ic_add_following"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/topic_channel_subscribe_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_follow"
+            android:textColor="@color/color_normal_1a1917"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

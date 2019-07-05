@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/normal_color_0f1218"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/avatar_one"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="11dp"
+                app:failureImage="@drawable/avatar_default"
+                app:placeholderImage="@drawable/avatar_default"
+                app:roundAsCircle="true"
+                app:roundingBorderColor="@color/black"
+                app:roundingBorderWidth="1dp" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/avatar_two"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="11dp"
+                app:failureImage="@drawable/avatar_default"
+                app:placeholderImage="@drawable/avatar_default"
+                app:roundAsCircle="true"
+                app:roundingBorderColor="@color/black"
+                app:roundingBorderWidth="1dp" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lineSpacingExtra="5dp"
+                    android:maxLines="3"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/enjoy_color_2"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_marginLeft="12dp">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/cover"
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:visibility="gone"
+                app:roundedCornerRadius="4dp" />
+
+            <View
+                android:id="@+id/cover_holder"
+                android:layout_width="68dp"
+                android:visibility="gone"
+                android:layout_height="68dp"
+                android:background="@drawable/shape_message_pic_placeholder" />
+
+            <TextView
+                android:id="@+id/cover_holder_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="end"
+                android:visibility="gone"
+                android:textColor="#e5e5e5"
+                android:textSize="10sp"
+                android:text="@string/string_video_has_delete" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_normal_28292d" />
+</LinearLayout>

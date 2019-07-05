@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/item_tv"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:gravity="center"
+        android:text="@string/string_entry_label"
+        android:textColor="@color/ricebook_color_1"
+        android:textSize="18sp" />
+
+    <View
+        android:id="@+id/item_division"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black_20" />
+</LinearLayout>

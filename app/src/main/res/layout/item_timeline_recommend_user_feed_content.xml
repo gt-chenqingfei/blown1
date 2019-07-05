@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="9dp">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/mItemRecommendUserCoverView"
+        android:layout_width="155dp"
+        android:layout_height="97dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:roundedCornerRadius="4dp" />
+
+    <View
+        android:id="@+id/mItemRecommendUserCoverShadowView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_topic_top_shadow"
+        app:layout_constraintBottom_toBottomOf="@+id/mItemRecommendUserCoverView"
+        app:layout_constraintEnd_toEndOf="@+id/mItemRecommendUserCoverView"
+        app:layout_constraintStart_toStartOf="@+id/mItemRecommendUserCoverView"
+        app:layout_constraintTop_toTopOf="@+id/mItemRecommendUserCoverView" />
+
+    <TextView
+        android:id="@+id/mItemRecommendUserContentView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:lineSpacingExtra="4sp"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/mItemRecommendUserCoverView"
+        app:layout_constraintStart_toStartOf="@+id/mItemRecommendUserCoverView"
+        app:layout_constraintTop_toBottomOf="@+id/mItemRecommendUserCoverView"
+        tools:text="仙女超级大眼术直" />
+
+
+</android.support.constraint.ConstraintLayout>

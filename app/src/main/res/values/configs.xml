@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="UMENG_APPKEY" translatable="false">5b62c48bb27b0a02030001e8</string>
+  <string name="QQ_ID" translatable="false">1107388303</string>
+  <string name="QQ_KEY" translatable="false">KEYYiQWEaZ4gTDIeW1x</string>
+  <string name="WX_ID" translatable="false">wxf4231525bf1d3053</string>
+  <string name="WX_KEY" translatable="false">1b3b788e560c66923a49849ba05a1de5</string>
+</resources>

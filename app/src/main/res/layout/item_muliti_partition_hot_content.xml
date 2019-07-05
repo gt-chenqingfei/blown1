@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mItemPartitionHotItemView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingEnd="16dp"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/mItemPartitionHotCoverView"
+        android:layout_width="match_parent"
+        android:layout_height="186dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:roundedCornerRadius="4dp" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:layout_width="0dp"
+        android:layout_height="8dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="@+id/mItemPartitionHotCoverView"
+        app:layout_constraintStart_toStartOf="@+id/mItemPartitionHotCoverView"
+        app:layout_constraintTop_toBottomOf="@+id/mItemPartitionHotCoverView"
+        app:srcCompat="@drawable/icon_topic_collapse" />
+
+    <View
+        android:id="@+id/mItemPartitionHotCoverShadowView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_topic_top_shadow"
+        app:layout_constraintBottom_toBottomOf="@+id/mItemPartitionHotCoverView"
+        app:layout_constraintEnd_toEndOf="@+id/mItemPartitionHotCoverView"
+        app:layout_constraintStart_toStartOf="@+id/mItemPartitionHotCoverView"
+        app:layout_constraintTop_toTopOf="@+id/mItemPartitionHotCoverView" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/mItemPartitionHotVideoImageView"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/mItemPartitionHotCoverView"
+        app:layout_constraintStart_toStartOf="@+id/mItemPartitionHotCoverView"
+        app:srcCompat="@drawable/icon_topic_video" />
+
+    <TextView
+        android:id="@+id/mItemPartitionHotSizeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:lineSpacingExtra="-1sp"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/mItemPartitionHotVideoImageView"
+        app:layout_constraintStart_toEndOf="@+id/mItemPartitionHotVideoImageView"
+        app:layout_constraintTop_toTopOf="@+id/mItemPartitionHotVideoImageView"
+        tools:text="5" />
+
+    <TextView
+        android:id="@+id/mItemPartitionHotContentView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:lineSpacingExtra="4sp"
+        android:maxLines="2"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/mItemPartitionHotCoverView"
+        app:layout_constraintStart_toStartOf="@+id/mItemPartitionHotCoverView"
+        app:layout_constraintTop_toBottomOf="@+id/mItemPartitionHotCoverView"
+        tools:text="秋意浓！银杏叶子黄了，好美呀银杏叶子黄了，好美呀！#无边泳池很美丽最长12个字" />
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/mItemPartitionHotHeadView"
+        android:layout_width="21dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="10dp"
+        app:failureImage="@drawable/avatar_default"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mItemPartitionHotContentView"
+        app:placeholderImage="@drawable/avatar_default"
+        app:roundAsCircle="true" />
+
+    <TextView
+        android:id="@+id/mItemPartitionHotUserNameView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:ellipsize="end"
+        android:lineSpacingExtra="2sp"
+        android:maxLength="9"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/mItemPartitionHotHeadView"
+        app:layout_constraintStart_toEndOf="@+id/mItemPartitionHotHeadView"
+        app:layout_constraintTop_toTopOf="@+id/mItemPartitionHotHeadView"
+        tools:text="卡哇伊卡哇伊很卡伊伊卡伊卡伊卡伊卡伊卡伊卡伊卡卡" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/mItemPartitionHotUserIdentificationView"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginLeft="4dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/mItemPartitionHotHeadView"
+        app:layout_constraintStart_toEndOf="@+id/mItemPartitionHotUserNameView"
+        app:layout_constraintTop_toTopOf="@+id/mItemPartitionHotHeadView" />
+
+    <TextView
+        android:id="@+id/mItemPartitionHotRulesView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:lineSpacingExtra="0sp"
+        android:textColor="@color/color_normal_74787e"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/mItemPartitionHotHeadView"
+        app:layout_constraintStart_toEndOf="@+id/mItemPartitionHotUserIdentificationView"
+        app:layout_constraintTop_toTopOf="@+id/mItemPartitionHotHeadView"
+        app:layout_goneMarginLeft="8dp"
+        tools:text="日娱优秀UP主" />
+
+    <com.shuashuakan.android.modules.widget.FollowTextView
+        android:id="@+id/mItemPartitionHotFollowView"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/bg_explore_un_follow"
+        android:gravity="center"
+        android:paddingLeft="9.5dp"
+        android:paddingRight="9.5dp"
+        android:text="@string/string_follow"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/mItemPartitionHotUserIdentificationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mItemPartitionHotUserIdentificationView"
+        app:markColor="@color/white" />
+
+    <LinearLayout
+        android:id="@+id/mItemPartitionHotFollowedLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/mItemPartitionHotHeadView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mItemPartitionHotHeadView">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginRight="2dp"
+            app:srcCompat="@drawable/ic_follow_star" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="你的关注"
+            android:textColor="@color/color_normal_74787e"
+            android:textSize="11sp" />
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/mTopicHotLineView"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/color_normal_e0e0e0_5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mItemPartitionHotHeadView" />
+
+
+</android.support.constraint.ConstraintLayout>

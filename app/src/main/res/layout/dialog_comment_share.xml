@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="221dp"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="2dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/string_share_to_label"
+            android:textColor="@color/comment_content_color"
+            android:textSize="14sp"
+            android:textStyle="" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/share_wechat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_wechat"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:text="@string/string_share_wechat_friend_label"
+            android:textColor="@color/comment_share_plat_color"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/share_moments"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_moments"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:text="@string/string_share_wechat_circle"
+            android:textColor="@color/comment_share_plat_color"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/share_qq"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_qq"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:text="@string/string_share_qq_friends"
+            android:textColor="@color/comment_share_plat_color"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/share_qzone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_qzone"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:text="@string/string_share_qq_place"
+            android:textColor="@color/comment_share_plat_color"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/share_copy_url"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_copy_url"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:text="@string/string_share_copy_link"
+            android:textColor="@color/comment_share_plat_color"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/share_open_browser"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_safari"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:text="@string/string_open_link_with_brower"
+            android:textColor="@color/comment_share_plat_color"
+            android:textSize="11sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+</LinearLayout>

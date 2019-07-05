@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+  <item>
+    <shape android:shape="oval">
+      <size
+        android:width="45dp"
+        android:height="45dp" />
+      <solid android:color="@color/notice_ff" />
+    </shape>
+  </item>
+  <item
+    android:width="30dp"
+    android:height="30dp"
+    android:drawable="@drawable/ic_system_massage"
+    android:gravity="center" />
+</layer-list>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.shuashuakan.android.modules.widget.swipexit.BaseSwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:id="@+id/swipe_layout"
+  android:layout_height="match_parent"
+  tools:context=".modules.player.activity.VideoPlayActivity">
+  <FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/home_container"/>
+</com.shuashuakan.android.modules.widget.swipexit.BaseSwipeLayout>

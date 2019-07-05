@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/player_view"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/colorPrimary"
+  android:focusable="true">
+
+  <com.shuashuakan.android.modules.widget.timeline.TimeLinePlayerView
+    android:id="@+id/texture_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center" />
+
+  <com.facebook.drawee.view.SimpleDraweeView
+    android:id="@+id/video_back_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:visibility="visible"
+    app:actualImageScaleType="centerInside"
+    app:failureImage="@drawable/ic_block_video"
+    app:failureImageScaleType="centerInside"
+    app:placeholderImage="@drawable/ic_block_video"
+    app:placeholderImageScaleType="centerInside"
+    app:roundedCornerRadius="4dp" />
+
+  <ProgressBar
+    android:id="@+id/progress"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:layout_gravity="bottom|end"
+    android:indeterminateTint="@color/white"
+    android:padding="10dp"
+    android:visibility="gone" />
+
+</FrameLayout>
